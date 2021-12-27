@@ -1,0 +1,17 @@
+#logo, #titre
+{
+    font-family: 'Shrikhand', cursive; 
+    width: 10%;
+}
+
+p
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+a, ul
+{
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+}
