@@ -1,0 +1,22 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch ./sass/main.scss:./public/css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vnc-Corp/Projet-3.git"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "\"Vincent LARIVIERE\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vnc-Corp/Projet-3/issues"
+  },
+  "homepage": "https://github.com/Vnc-Corp/Projet-3#readme"
+}
