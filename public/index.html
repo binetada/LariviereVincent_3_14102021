@@ -53,24 +53,27 @@
                 <h3>Fonctionnement</h3>
                 <!--Contenant des buttons fonctionnement-->
                 <div class="box-fonction__choice">
-
+                    
                     <!-- Bouton 1-->
-                    <p class="btn--chiffre">1</p>
-                    <button class="box-fonction__btn" type="button"> 
+                     
+                    <button class="box-fonction__btn" type="button">
+                        <p class="btn--chiffre">1</p>
                         <i class="fas fa-mobile-alt --icone"></i>
                         Choissisez un restaurant
                     </button>
 
                     <!-- Bouton 2-->
-                    <p class="btn--chiffre">2</p>
+                    
                     <button class="box-fonction__btn" type="button"> 
+                        <p class="btn--chiffre">2</p>
                         <i class="fas fa-list-ul --icone"></i>
                         Composez votre menu
                     </button>
 
                     <!-- Bouton 3-->
-                    <p class="btn--chiffre">3</p>
+                    
                     <button class="box-fonction__btn" type="button"> 
+                        <p class="btn--chiffre">3</p>
                         <i class="fas fa-store --icone"></i>
                         Dégustez au restaurant
                     </button>
@@ -81,55 +84,79 @@
             </section>
 
             <!-- Section choix restaurants-->
-            <section class="">
+            <section class="box_restaurant">
                 <h3> Restaurants</h3>
                 <!-- Contenant des carte restaurant interne-->
-                <div class="">
+                <div class="box__choice-restaurant">
                     <!--Article incrustable dans l'aside d'autres site-->
+
+                    <div class="block-1">
                     <!--Card numéro 1-->
-                    <article>
+                    <article class="box__card">
+                        
                         <figure>
-                            <img src="" alt="" title="">
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
                             <figcaption> 
-                                <h4 class="header-card">La palette du goût</h4>
-                                <p class="text-card"> Ménilmontant</p>
-                            </figcaption>
+                                <div class="box__card--header">
+                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
+                                    <p class="box__card--text"> Ménilmontant</p>
+                                </div>
+                            </figcaption>  
+                            <span class="card--tag">Nouveau</span>                      
                         </figure>
+                        
                     </article>
 
                      <!--Card numéro 2-->
-                     <article>
+                     <article class="box__card">
                         <figure>
-                            <img src="" alt="" title="">
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
                             <figcaption> 
-                                <h4 class="header-card">La palette du goût</h4>
-                                <p class="text-card"> Ménilmontant</p>
-                            </figcaption>
+                                <div class="box__card--header">
+                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
+                                    <p class="text-card"> Ménilmontant</p>
+                                </div>                         
+                            </figcaption>      
+                            <span class="card--tag">Nouveau</span>                  
                         </figure>
+                        
                     </article>
+                    </div>
 
+                    <div class="block-2">                    
                      <!--Card numéro 3-->
-                     <article>
+                     <article class="box__card">
                         <figure>
-                            <img src="" alt="" title="">
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
                             <figcaption> 
-                                <h4 class="header-card">La palette du goût</h4>
-                                <p class="text-card"> Ménilmontant</p>
+                                <div class="box__card--header">
+                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
+                                    <p class="text-card"> Ménilmontant</p>
+                                </div>
+                                
                             </figcaption>
+                        <span class="card--tag">Nouveau</span>
                         </figure>
+                        
                     </article>
-
+                    
                      <!--Card numéro 4-->
-                     <article>
+                     <article class="box__card">
+                        
                         <figure>
-                            <img src="" alt="" title="">
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
                             <figcaption> 
-                                <h4 class="header-card">La palette du goût</h4>
-                                <p class="text-card"> Ménilmontant</p>
+                                <div class="box__card--header">
+                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
+                                    <p class="text-card"> Ménilmontant</p>
+                                </div>
+                                
                             </figcaption>
+                            <span class="card--tag">Nouveau</span>
                         </figure>
+                        
                     </article>
-
+                    </div>
                 </div>
 
             </section>
@@ -138,15 +165,17 @@
 
         <!---------------------------------------------------------------------------------FOOTER------------------------------------------------------------->
         <footer>
-            <h3>Ohmyfood</h3>
-            <ul>
-                <li> <a href="#"> <i class="fa-duotone fa-utensils"></i>Proposer un restaurant </a> </li>
-                <li> <a href="#"> <i class="fa-solid fa-handshake-angle"></i>Devenir partenaire </a> </li>
-                <li> <a href="#"> Mention légales</a></li>
-                <li> <a href="#"> Contact </a> </li>
-            </ul>
-
+            <div >
+                <h3>Ohmyfood</h3>
+                <div class="footer__text">
+                    <a href="#"> <i class="fas fa-utensils"></i>Proposer un restaurant </a> 
+                    <a href="#"> <i class="fas fa-hands-helping"></i>Devenir partenaire </a> 
+                    <a href="#"> Mention légales</a>
+                    <a href="#"> Contact </a> 
+                </div>
+            </div>
         </footer>
+            
 
     </body>
 

@@ -1,8 +1,10 @@
+/*--------------------------------------header-------------------------------*/
 body
 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+   
     
     
         header {
@@ -87,7 +89,7 @@ a, ul
     }
     
 }
-/*-------------------------------------------------------------------*/
+/*-----------------------------------------------NAV--------------------*/
 button 
 {
     background-color: transparent;
@@ -131,17 +133,23 @@ button
     
 }
 
-/*-------------------------------------------------------------------*/
+/*---------------------------------fonctionnement----------------------------------*/
 .box-fonction
 {
     width: 100%;
-    height: 350px;
-    
-    margin: 50px 0;
+    height: 300px;
+    margin: 30px 0;
     
     h3 {
-        margin-bottom: 5px;
+        margin-left: 15px;
+        margin-bottom: 15px;
         font-weight: 900;
+        
+        @media (min-width:550px) {
+            display: flex;
+            justify-content: center;
+            margin-left: 0px;
+        }   
     }
     
     
@@ -151,13 +159,23 @@ button
         flex-direction: column;
         justify-content: center;
         width: 100%;
+        
+        @media (min-width: 1100px) {
+            margin:auto;
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+             
+        }  
+        
       
     }  
     
     &__btn {
         
         height: 60px;
-        width: 85%;
+        width: 90%;
         background-color: $graylight;
         margin: 10px auto;
         border-radius: 15px;
@@ -169,33 +187,236 @@ button
         box-shadow: 0px 0px 5px gray;
         
             .--icone{
-            color: gray;     
-            position: relative;
-            right: 25px;            }
-                       
-    }
+                color: gray;     
+                position: relative;
+                right: 25px;
+                font-size: 1.3em;
+            }
+        
+        @media (min-width: 768px){
+            width: 260px;
+        }
+       
+        }
         
     
 }
 
-
 .btn--chiffre
 {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     
+    font-size: 0.8em;
+    z-index: 2;
     background-color: $primary;
     width: 20px;
     height: 20px;
     color: white;
     border-radius: 50%;
-    position: relative;
-    left: 15px;
-    top: 50px;
+    font-size: 0.9em;  
     
-    font-size: 0.8em;
-    z-index: 2;
+    margin: 0;
+    position: relative;
+    left: -50px;
+    
+    
+   
+    
+    @media (max-width: 768px){
+        
+        
+        position: relative;
+        right: 100px;
+    }
+    
+}
+
+
+.box-fonction__btn:nth-child(1) .btn--chiffre 
+{
+    
+    
+}
+    
+.btn--chiffre:nth-child(1)
+{
+
+}
+/*---------------------------------------------restaurant--------------------------------------*/
+
+.box_restaurant 
+{
+    
+    height: 930px;
+    
+    
+    background-color: $graylight;
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    h3 {
+        margin: 30px 0 0 20px;
+    }
+    
+    @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+       
+        }
+}
+
+.box__card {
+        display: flex;
+        flex-direction: column;
+    /*-----------------------------------------gère la taille des card*/
+        width: 90%;
+        height: 185px;
+    /*--------------------------------------*/  
+        background-color: white;
+        border-radius: 20px; 
+        margin: 20px auto;
+        box-shadow: 0px 4px 10px gray;
+
+    
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 45%;
+            
+            
+        }
+}
+
+
+
+.pic-restaurant /*modification image intérieur card - section 1*/
+        {
+            
+            width: 100%;
+            height: 120px;
+            min-height: 120px; 
+           
+            border-radius: 20px 20px 0 0;
+            object-fit: cover;
+        }
+
+.box__card--header
+{
+    margin: 7px 0 0 15px;
+    width: 90%;
+    height: 50%;
+    font-size: 100%;
+    line-height: 23px;
+    
+   
+}
+
+.--block-head-heart {
+    
+    display: flex;
+    justify-content: space-between;
+    
+    .fa-heart {
+        color: red;
+        font-size: 1.5em;
+        position: relative;
+        top: 0px;
+    }
+    
+}
+
+.card--tag {
+    
+    float: right;
+    position: relative;
+    bottom: 80%;
+    right: 5%;
+ 
+    /*
+    position: relative;
+    bottom: 160px;
+    left: 70%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;*/
+    background-color: #99e2d0;
+    color: #278870;
+    width: 75px;
+    padding: 5px;
+    font-weight: bold;
+    
+    font-size: 0.9em;
+    text-align:  center;
+}
+
+@media (min-width: 768px) {
+ 
+    --block-1 {
+        color: red;
+        background-color: red;
+    }
+}
+
+/*-------------------------------------------------------------------footer */
+footer {
+    background-color: #353535;
+    display:  flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    
+    h3 {
+        margin: 10px 0 15px 20px;
+        font-family: 'Shrikhand', cursive;
+        color: white;
+        
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+        }
+        
+    }
+    
+    .footer__text {
+        
+        margin: 20px 0 20px 20px;
+        color: white;
+        display:  flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        line-height: 25px;
+        
+         @media (min-width: 768px) {
+            display: flex;        
+            flex-direction: row; 
+            justify-content: space-around;    
+        }
+    }
+    
+    .fas {
+        width: 7%;
+        margin-right: 1px;
+        color: white;
+        
+        @media (min-width: 768px) {
+            
+            margin-right: 15px;
+        }
+    }
+    
+    a {
+        color: white;
+    }
+    
+    
 }
 
 
