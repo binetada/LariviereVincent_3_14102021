@@ -4,7 +4,14 @@ body
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-   z-index: 0;
+    z-index: 0;
+   
+    margin: auto;
+    
+    @media (max-width: 768px){
+        width: 100%;
+        
+    }
     
     
         header {
@@ -30,7 +37,7 @@ body
 hr 
 {
    width: 100%;
-   height: 3px;
+   height: 4px;
    border: none;
    background-color: gray;
    background: linear-gradient(to bottom, gray 0%, $graydarck  100%);
@@ -107,7 +114,7 @@ button
     &:hover {
        cursor: pointer; 
        box-shadow: 0px 0px 3px $secondary;
-       background: linear-gradient($secondary,$primary);
+       background: linear-gradient($primary,$secondary);
        transform: scale(1.02);
        /*transition: all 1s ease-out;*/
     }
@@ -143,7 +150,7 @@ button
     width: 200px;;
     height: 50px;
     color: white;
-    background: linear-gradient($primary, $secondary);
+    background: linear-gradient($secondary, $primary);
     border-radius: 50px;
     box-shadow: 0px 0px 3px gray;
     font-weight: bolder; 
@@ -191,8 +198,17 @@ button
             display: flex;
             flex-direction: row;
             justify-content: center;
-             
-        }  
+            
+             @media (min-width: 1300px) {
+                margin:auto;
+                width: 1000px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+        }
+        }
+        
+        
         
       
     }  
@@ -259,17 +275,15 @@ button
 .box_restaurant 
 {
     
-    height: 930px;
-    
-    
     background-color: $graylight;
-    
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    padding: 0 20px;
     
     h3 {
-        margin: 30px 0 0 20px;
+        margin: 30px 0 0 0;
         
         @media (min-width: 768px) {
             text-align: center;
@@ -278,58 +292,86 @@ button
     }
     
         @media (min-width: 768px) {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-       
-        }
+            
+            
+            .box_restaurant {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                width: 100%;
+                
+            }
+            
+            .box__choice-restaurant {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+                
+                .box__card {
+                    width: 20%;
+                    max-width: 20%;                    
+                    margin: 20px;
+                }
+            }
+        
+        } /*------------media*/
+        
+    @media (min-width: 1300px) {
+        
+    }
+    
+    
 }
+
 
 .box__card {
         display: flex;
         flex-direction: column;
     /*-----------------------------------------gère la taille des card*/
-        width: 90%;
-        height: 185px;
+        width: 100%;
+        
     /*--------------------------------------*/  
         background-color: white;
         border-radius: 20px; 
-        margin: 20px auto;
+        margin: 20px 0;
         box-shadow: 0px 4px 10px gray;
+        position: relative;
 
-    
-        @media (min-width: 768px) {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            width: 45%;
-            
-            
-        }
 }
 
 
 
 .pic-restaurant /*modification image intérieur card - section 1*/
-        {
-            
-            width: 100%;
-            height: 120px;
-            min-height: 120px; 
-           
-            border-radius: 20px 20px 0 0;
-            object-fit: cover;
-        }
+{
+    
+    width: 100%;
+    height: 34vw;
+    min-height: 34vw; 
+    
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    
+    @media (min-width: 768px) {
+        height: 20vw;
+        min-height: 20vw; 
+    }
+}
 
 .box__card--header
 {
     margin: 7px 0 0 15px;
     width: 90%;
-    height: 50%;
-    font-size: 100%;
-    line-height: 23px;
+    height: 16vw;
+    font-size: 5vw;
     
-   
+    @media (min-width: 768px) {
+        height: 5vw;
+        font-size: 1.3vw;
+        
+    }
+    
 }
 
 .--block-head-heart {
@@ -348,27 +390,15 @@ button
 
 .card--tag {
     
-    float: right;
-    position: relative;
-    bottom: 80%;
-    right: 5%;
- 
-    /*
-    position: relative;
-    bottom: 160px;
-    left: 70%;
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;*/
     background-color: #99e2d0;
     color: #278870;
-    width: 75px;
     padding: 5px;
     font-weight: bold;
-    
-    font-size: 0.9em;
-    text-align:  center;
+    font-size: .9em;
+    text-align: center;
+    position: relative;
+    width: 80px;
+    transform: translate(200px, -150px);
 }
 
 
