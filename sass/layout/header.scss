@@ -1,0 +1,38 @@
+/*layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable,
+ par exemple un header pour les mises en page de grande taille ou un footer ; */
+header {
+            
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    
+        .header-logo
+        {
+            width: 100%;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Shrikhand', cursive;    
+            
+            
+        }
+}
+
+hr 
+{
+   width: 100%;
+   height: 4px;
+   border: none;
+   background-color: gray;
+   background: linear-gradient(to bottom, gray 0%, $graydarck  100%);
+   
+}
+
+
+#logo
+{
+    width: 100%;
+    font-family: 'Shrikhand', cursive;
+    font-size: 150%;
+}
