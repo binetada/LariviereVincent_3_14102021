@@ -1,0 +1,47 @@
+/*le directory base/ contient les fichiers qui définissent les fondations de votre site, 
+par exemple la police de caractères et les normes que vous voulez appliquer sur tout votre site,
+ telles que le box-sizing ; */
+
+/*--------------------------------------body-------------------------------*/
+body
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 0;
+   
+    margin: auto;
+    
+    @media (max-width: 768px){
+        width: 100%;
+        
+    }
+    
+    
+        
+}
+
+
+a, ul
+{
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+}
+
+*
+{
+    
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+    
+}
+
+
+
+
+
+

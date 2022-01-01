@@ -1,3 +1,23 @@
 // importe toutes les scss dossier + fichier
 
-@ import './utils/variables';
+//-----------------------------------------Base
+@import './base/base-style';
+
+//-----------------------------------------Utils
+@import './utils/variables';
+@import './utils/mixins';
+
+//-----------------------------------------layout
+@import './layout/header';
+@import './layout/footer';
+
+//-----------------------------------------components
+@import './components/button';
+
+//-----------------------------------------page
+@import './page/index';
+
+//-----------------------------------------thèmes
+//-----------------------------------------vendors
+
+

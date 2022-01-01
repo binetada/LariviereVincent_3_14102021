@@ -20,7 +20,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"> 
         
     </head>
     <!---------------------------------------------------------------------------------BODY--------------------------------------------------------------->
@@ -28,45 +28,55 @@
         <!-------------------------------------------------------------------------------HEADER------------------------------------------------------------->
         <header>
             <!-- Logo -->
-            <img src="images/logo/ohmyfood.png" id="logo" title="" alt=""> 
-            <!-- Localisation -->
-            <div class ="geo-localisation">
-                <i class="fas fa-map-marker-alt"></i> 
-                <p>Localisation</p>
-            </div>
-
-            <!-- Navigation -->
-            <nav>
-                <h2> Réservez le menu qui vous convient</h2> 
-                <p> Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <button class="explore-restaurant" type="button">Explorer nos restaurants</button>   
-            </nav>
+            <h1 class="header-logo">Ohmyfood</h1> 
+            <hr>
         </header>
+            
         <!---------------------------------------------------------------------------------MAIN--------------------------------------------------------------->
         <main>
+            <section class="box">
+                <!-- Localisation -->
+                <div class ="box__geo-localisation">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    <p class="box__geo-localisation--bold">Paris, Belleville</p>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="explore">
+                    <h2> Réservez le menu qui vous convient</h2> 
+                    <p> Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                    <button class="btn__explore" type="button">Explorer nos restaurants</button>   
+                </nav> 
+
+            </section>
+
             <!-- Section Fonctionnement -->
-            <section class=""> 
+            <section class="box-fonction"> 
                 <h3>Fonctionnement</h3>
                 <!--Contenant des buttons fonctionnement-->
-                <div class="">
+                <div class="box-fonction__choice">
+                    
                     <!-- Bouton 1-->
-                    <button class="" type="button"> 
-                        <i class="fa-duotone fa-circle-1"></i>
-                        <i class="fa-solid fa-mobile-screen-button"></i>
+                     
+                    <button class="box-fonction__btn" type="button">
+                        <span class="box-fonction__chiffre">1</span>
+                        <i class="fas fa-mobile-alt "></i>
                         Choissisez un restaurant
                     </button>
 
                     <!-- Bouton 2-->
-                    <button class="" type="button"> 
-                        <i class="fa-duotone fa-circle-2"></i>
-                        <i class="fa-solid fa-list"></i>
+                    
+                    <button class="box-fonction__btn" type="button"> 
+                        <span class="box-fonction__chiffre">2</span>
+                        <i class="fas fa-list-ul "></i>
                         Composez votre menu
                     </button>
-                
+
                     <!-- Bouton 3-->
-                    <button class="" type="button"> 
-                        <i class="fa-duotone fa-circle-3"></i>
-                        <i class="fa-solid fa-store"></i>
+                    
+                    <button class="box-fonction__btn" type="button"> 
+                        <span class="box-fonction__chiffre">3</span>
+                        <i class="fas fa-store "></i>
                         Dégustez au restaurant
                     </button>
 
@@ -76,55 +86,80 @@
             </section>
 
             <!-- Section choix restaurants-->
-            <section class="">
+            <section class="box_restaurant">
                 <h3> Restaurants</h3>
                 <!-- Contenant des carte restaurant interne-->
-                <div class="">
+                <div class="box__choice-restaurant">
                     <!--Article incrustable dans l'aside d'autres site-->
+
+                    
                     <!--Card numéro 1-->
-                    <article>
+                    <article class="box__card">
+                        
                         <figure>
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="">
+                            
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
                             <figcaption> 
-                                <h4 class="header-card">La palette du goût</h4>
-                                <p class="text-card"> Ménilmontant</p>
-                            </figcaption>
+                                <div class="box__card--header">
+                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
+                                    <p class="box__card--text"> Ménilmontant</p>
+                                </div>
+                            </figcaption>  
+                                                  
                         </figure>
+                        <!--<span class="card--tag">Nouveau</span>-->
                     </article>
 
                      <!--Card numéro 2-->
-                     <article>
+                     <article class="box__card">
                         <figure>
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="">
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
                             <figcaption> 
-                                <h4 class="header-card">La palette du goût</h4>
-                                <p class="text-card"> Ménilmontant</p>
-                            </figcaption>
+                                <div class="box__card--header">
+                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
+                                    <p class="text-card"> Ménilmontant</p>
+                                </div>                         
+                            </figcaption>      
+                                              
                         </figure>
+                        
                     </article>
+                    
 
+                                        
                      <!--Card numéro 3-->
-                     <article>
+                     <article class="box__card">
                         <figure>
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="">
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
                             <figcaption> 
-                                <h4 class="header-card">La palette du goût</h4>
-                                <p class="text-card"> Ménilmontant</p>
+                                <div class="box__card--header">
+                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
+                                    <p class="text-card"> Ménilmontant</p>
+                                </div>
+                                
                             </figcaption>
+                        
                         </figure>
+                        
                     </article>
-
+                    
                      <!--Card numéro 4-->
-                     <article>
+                     <article class="box__card">
+                        
                         <figure>
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="">
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
                             <figcaption> 
-                                <h4 class="header-card">La palette du goût</h4>
-                                <p class="text-card"> Ménilmontant</p>
+                                <div class="box__card--header">
+                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
+                                    <p class="text-card"> Ménilmontant</p>
+                                </div>
+                                
                             </figcaption>
+                            
                         </figure>
+                        
                     </article>
-
+                    
                 </div>
 
             </section>
@@ -133,15 +168,17 @@
 
         <!---------------------------------------------------------------------------------FOOTER------------------------------------------------------------->
         <footer>
-            <h3>Ohmyfood</h3>
-            <ul>
-                <li> <a href="#"> <i class="fa-duotone fa-utensils"></i>Proposer un restaurant </a> </li>
-                <li> <a href="#"> <i class="fa-solid fa-handshake-angle"></i>Devenir partenaire </a> </li>
-                <li> <a href="#"> Mention légales</a></li>
-                <li> <a href="#"> Contact </a> </li>
-            </ul>
-
+            <div >
+                <h3>Ohmyfood</h3>
+                <div class="footer__text">
+                    <a href="#"> <i class="fas fa-utensils"></i>Proposer un restaurant </a> 
+                    <a href="#"> <i class="fas fa-hands-helping"></i>Devenir partenaire </a> 
+                    <a href="#"> Mention légales</a>
+                    <a href="#"> Contact </a> 
+                </div>
+            </div>
         </footer>
+            
 
     </body>
 
