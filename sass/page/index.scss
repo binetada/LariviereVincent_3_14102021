@@ -152,7 +152,7 @@
 
 /*---------------------------------------------restaurant--------------------------------------*/
 
-.box_restaurant 
+.container-restaurant 
 {
     
     background-color: $graylite;
@@ -165,7 +165,8 @@
     h3 {
         margin: 30px 0 0 0;
         
-        @media (min-width: 768px) {
+        @media (min-width: 768px) 
+        {
             
             padding-bottom: 1%;
             @include titre--responsive; // mixin générale pour les titres
@@ -173,62 +174,63 @@
         
     }
     
-        @media (min-width: 768px) {
+    @media (min-width: 768px) 
+    {
+        
+        .container-restaurant 
+        {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 100%;
             
-            .box_restaurant {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                width: 100%;
-                
-            }
+        }
+        
+    &__choice-restaurant 
+    {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        
+    }    
+
+    } /*------------media*/
+          
+}// fin
+
+
+.box__card 
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;        
+    background-color: white;
+    border-radius: 20px; 
+    margin: 20px 0;
+    box-shadow: 0px 4px 10px gray;
+    position: relative;
+
+        //media q pour la taille des card x2 depuis phone à pc
+        @media (min-width:768px)   
+        {
+            margin: 20px 20px; 
+            width: 20%;
             
-        .box__choice-restaurant {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                justify-content: center;
-                width: 100%;
-            
-            
-           
-            }    
-            .box__card {
-                    width: 20%;
-                    max-width: 20%;                    
-                    margin: 20px;
-                
-                    @media (min-width:769px) and (max-width: 840px)  {
-                        margin: 20px 10px; 
-                        width: 20%;       
-            }
+                @media (min-width:769px) and (max-width:1000px)
+                {
+                    margin: 20px 15px;
                 }
-        
-        } /*------------media*/
-        
-    
-    
-    
-}
+        }   
 
-
-.box__card {
-        display: flex;
-        flex-direction: column;
-    /*-----------------------------------------gère la taille des card*/
-        width: 100%;        
-    /*--------------------------------------*/  
-        background-color: white;
-        border-radius: 20px; 
-        margin: 20px 0;
-        box-shadow: 0px 4px 10px gray;
-        position: relative;
+        
 
 }
 
 
-
-.pic-restaurant /*modification image intérieur card - section 1*/
+/*------------------------------------------------------------------*/
+.box__card--header /*modification image intérieur card - section 1*/
 {
     
     width: 100%;
@@ -238,20 +240,23 @@
     border-radius: 20px 20px 0 0;
     object-fit: cover;
     
-    @media (min-width: 768px) {
+    @media (min-width: 768px) 
+    {
         height: 20vw;
         min-height: 20vw; 
     }
+    
 }
 
-.box__card--header
+.box__card--footer
 {
     margin: 7px 0 0 15px;
     width: 90%;
     height: 16vw;
     font-size: 5vw;
     
-    @media (min-width: 768px) {
+    @media (min-width: 768px) 
+    {
         height: 5vw;
         font-size: 1.3vw;
         
@@ -259,12 +264,14 @@
     
 }
 
-.--block-head-heart {
+.text-card__head-heart 
+{
     
     display: flex;
     justify-content: space-between;
     
-    .fa-heart {
+    .fa-heart
+    {
         color: red;
         font-size: 1.5em;
         
@@ -278,8 +285,8 @@
     
 }
 
-.card--tag {
-    
+.card--tag 
+{
     background-color: #99e2d0;
     color: #278870;
     padding: 5px;
@@ -289,10 +296,5 @@
     position: relative;
     width: 80px;
     transform: translate(200px, -150px);
+
 }
-
-
-@media (min-width: 768px) {
-    
-}
-
