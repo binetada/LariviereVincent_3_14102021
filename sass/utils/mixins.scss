@@ -1,0 +1,8 @@
+// mixin pour les titres ponctuant les blocs, agrandissement pour responsive tablet et pc
+@mixin titre--responsive {
+
+    text-align: center;
+    height: auto;
+    font-size: 30px;
+    
+}

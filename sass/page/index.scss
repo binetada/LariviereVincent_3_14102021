@@ -20,22 +20,28 @@
         align-items: center;
         justify-content: center;
         
-        &--bold {
-            font-weight: bolder;
-            font-size: 0.8em;
-        }
+            &--bold {
+                font-weight: bolder;
+                font-size: 0.8em;
+            }
         
         
         
-        .fa-map-marker-alt {
-            
-            margin-right: 15px;
-            margin-left: -50px;
-            
-        }
+    .fa-map-marker-alt {
+        
+        margin-right: 15px;
+        margin-left: -50px;
         
     }
-    
+        
+    }
+    //media magique pour le responsive grossissement 
+    @media (min-width:768px) 
+        { 
+            height: auto;
+            font-size: 20px;
+            padding-bottom: 0.5%;
+        }
 }
 /*-----------------------------------------------NAV--------------------*/
 
@@ -52,8 +58,10 @@
     h2 {
         width: 250px;
         
-        @media (min-width: 768px){
+        @media (min-width: 768px)
+        {
             width: 100%;
+            
         }
     }
     
@@ -64,17 +72,7 @@
     
 }
 
-.explore-btn
-{
-    width: 200px;;
-    height: 50px;
-    color: white;
-    background: linear-gradient($secondary, $primary);
-    border-radius: 50px;
-    box-shadow: 0px 0px 3px gray;
-    font-weight: bolder; 
-    
-}
+
 
 /*---------------------------------fonctionnement----------------------------------*/
 .box-fonction
@@ -97,10 +95,9 @@
         font-weight: 900;
         
         @media (min-width:768px) {
-            display: flex;
-            justify-content: center;
+            
             margin-left: 0px;
-            font-size: 1.5rem;
+            @include titre--responsive; // mixin générale pour les titres 
         }   
     }
     
@@ -128,49 +125,15 @@
             }
         }
         
-        
-        
-      
     }  
-    
-    &__btn {
-        
-        height: 60px;
-        width: 90%;
-        background-color: $graylite;
-        margin: 10px auto;
-        border-radius: 15px;
-        font-weight: 900;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0px 5px 3px gray;
-        position: relative;
-        
-            .--icone{
-                color: gray;     
-                position: relative;
-                right: 25px;
-                font-size: 1.3em;
-            }
-        
-        @media (min-width: 768px){
-            width: 260px;
-        }
-       
-        }
-        
     
 }
 
-.btn--chiffre
+.box-fonction__chiffre
 {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
     
     z-index: 2;
     background-color: $primary;
@@ -184,10 +147,7 @@
     position: absolute;
     left: 0;
     transform: translateX(-50%);
-    
-    
-   
-    
+      
 }
 
 /*---------------------------------------------restaurant--------------------------------------*/
@@ -206,14 +166,14 @@
         margin: 30px 0 0 0;
         
         @media (min-width: 768px) {
-            text-align: center;
-            font-size: 1.5rem;
+            
+            padding-bottom: 1%;
+            @include titre--responsive; // mixin générale pour les titres
         } 
         
     }
     
         @media (min-width: 768px) {
-            
             
             .box_restaurant {
                 display: flex;
@@ -307,8 +267,13 @@
     .fa-heart {
         color: red;
         font-size: 1.5em;
-        position: relative;
-        top: 0px;
+        
+
+        @media (min-width: 768px)
+        {
+            transform: translateX(-35%);
+        }
+        
     }
     
 }
