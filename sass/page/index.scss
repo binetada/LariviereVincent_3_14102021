@@ -152,149 +152,137 @@
 
 /*---------------------------------------------restaurant--------------------------------------*/
 
-.container-restaurant 
+
+.container-restaurant
+{
+    width: 100%;
+    margin:  50px auto;
+    background-color: $graylite;
+}
+
+.heading-titre
+{
+    text-align: center;
+    font-size: clamp(20px, 5vw, 20px);
+    margin-bottom: 50px;
+}
+
+.container__choice-restaurant //row
 {
     
-    background-color: $graylite;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    padding: 0 20px;
+    flex-direction: row;
+    justify-content: space-around;
     
-    h3 {
-        margin: 30px 0 0 0;
-        
-        @media (min-width: 768px) 
-        {
-            
-            padding-bottom: 1%;
-            @include titre--responsive; // mixin générale pour les titres
-        } 
-        
-    }
-    
-    @media (min-width: 768px) 
-    {
-        
-        .container-restaurant 
-        {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            width: 100%;
-            
-        }
-        
-    &__choice-restaurant 
-    {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
-            width: 100%;
-        
-    }    
+}
 
-    } /*------------media*/
-          
-}// fin
-
-
-.box__card 
+.box-card
 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;        
-    background-color: white;
-    border-radius: 20px; 
-    margin: 20px 0;
-    box-shadow: 0px 4px 10px gray;
-    position: relative;
+    width: 45%; // très important ! Administre la taille des card en fonction du width du container général ! (95%)
+    background: white;
+    margin-bottom: 30px;
+    transition: 0.3s;// permet une jolie transition responsive
 
-        //media q pour la taille des card x2 depuis phone à pc
-        @media (min-width:768px)   
-        {
-            margin: 20px 20px; 
-            width: 20%;
-            
-                @media (min-width:769px) and (max-width:1000px)
-                {
-                    margin: 20px 15px;
-                }
-        }   
-
-        
+    border-radius: 20px;
+    box-shadow: 0 4px 10px gray;
+    position: relative;//pour le tag-new
 
 }
 
-
-/*------------------------------------------------------------------*/
-.box__card--header /*modification image intérieur card - section 1*/
+.box__card--header img // rien ne se passe si je n'interviens pas sur l'image /!\ pas de cover possible sur un div !
 {
-    
     width: 100%;
-    height: 34vw;
-    min-height: 34vw; 
-    
-    border-radius: 20px 20px 0 0;
     object-fit: cover;
+    height: clamp(15vw, 30vw, 20vw);
+    border-radius: 20px 20px 0 0;
+
+}
+
+.text-card-title
+{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+
     
-    @media (min-width: 768px) 
+    .fa-heart
     {
-        height: 20vw;
-        min-height: 20vw; 
+        transform: translateX(-50%);
+        font-size: 1.2em;
+        
+        @media (min-width: 1500px)
+        {
+            transform: translateX(-150%);
+        }
+
+        @media (max-width: 768px)
+        {
+            transform: translateX(-100%);
+
+        }
     }
-    
 }
 
 .box__card--footer
 {
-    margin: 7px 0 0 15px;
-    width: 90%;
-    height: 16vw;
-    font-size: 5vw;
-    
-    @media (min-width: 768px) 
-    {
-        height: 5vw;
-        font-size: 1.3vw;
-        
-    }
-    
+    margin: 5px 0 5px 15px;
+    line-height: 30px;
+    font-size: clamp(15px, 5vw, 22px);//20px;
 }
 
-.text-card__head-heart 
+.tag-new 
 {
-    
-    display: flex;
-    justify-content: space-between;
-    
-    .fa-heart
-    {
-        color: red;
-        font-size: 1.5em;
-        
-
-        @media (min-width: 768px)
-        {
-            transform: translateX(-35%);
-        }
-        
-    }
-    
-}
-
-.card--tag 
-{
+    display: inline-block;
     background-color: #99e2d0;
     color: #278870;
-    padding: 5px;
+    padding: 4px;
     font-weight: bold;
-    font-size: .9em;
+    font-size: clamp(10px, 5vw, 20px);
     text-align: center;
-    position: relative;
-    width: 80px;
-    transform: translate(200px, -150px);
+    width: clamp(5vw85, 15vw, 200px); //50%;
 
+    // initialisation et position du tag (card en relative, lui en absolute)
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-20%, 50%);
+
+        @media (min-width: 992px)
+        {
+            transform: translate(-20%, 85%);
+            width: 25%;
+        }
+    
 }
+// ------------------------------------------------------------------------responsive card version OC /!\
+// ---------------------------------
+@media screen and (max-width: 620px) 
+{
+    .container-restaurant
+    {
+        width: 100%;
+    }    
+
+   
+
+    .box-card
+    {
+        width: 90%;
+        
+    }  
+    //------------------------------------------------------------------sp
+    .box__card--header img
+    {
+        height: 40vw; // change la taille des card sans faire déborder le card-footer !
+        
+        
+    }
+
+    .box__card--footer
+    {
+        padding: 0 0 5px 0;
+        margin-bottom: 0px;
+    }
+}
+
