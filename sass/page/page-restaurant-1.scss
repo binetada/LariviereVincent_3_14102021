@@ -1,0 +1,25 @@
+//sccss page restaurant 1-4
+
+/*----------------------------------------------------------------------main */
+// -------------------------dimension et position image  
+.bloc-image, img
+{
+    width: 100%;
+    object-fit: cover;
+    height: 49vw;
+    max-height: 500px;
+    z-index: -1;
+}
+
+// ---------------------------Menu
+.container__menu
+{
+    background-color: $graylite;
+    padding-top: 10px;
+    border-radius: 50px;
+
+    position: relative;
+    transform: translateY(-50px);
+}
+
+
