@@ -35,9 +35,15 @@
 
     h2
     {
-        font-size: clamp(15px, 5vw, 25px);
-        padding-bottom: 15px;
+        font-size: clamp(15px, 5vw, 20px);
+        padding-bottom: 2px;
         margin-left: 15px;// suit le bloc menu card pour la valeur depositionnement
+        margin-bottom: 15px;
+        font-weight: lighter;
+        width: 15%;
+        border-bottom: 2px solid $tertiary;
+        
+        
     }
 }
 
@@ -60,12 +66,13 @@
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
+        line-height: 1.38;
 
     }
     
     &--price
     {
-        color: red;
+        
         font-weight: 900;
         transform: translateX(-50%);
     }
