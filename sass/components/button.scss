@@ -8,7 +8,7 @@ button
     
     
 }
- // ----------------------------------------------------------------------------bouton explore
+ // ----------------------------------------------------------------------------bouton explore/commande
 .btn__explore 
 {
 
@@ -37,7 +37,23 @@ button
             margin-top: 10px;
         }
 
+        
 }
+
+.bloc-btn-commander
+        {
+            display:inline-block;
+            display: flex;
+            justify-content: center;
+            color: red;
+
+            transform: translateY(-80%);
+            margin-bottom: -50px;
+        }
+
+
+
+
 
  // ----------------------------------------------------------------------------bouton fonctionnement
 .box-fonction__btn 

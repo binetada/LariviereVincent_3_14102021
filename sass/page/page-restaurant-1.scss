@@ -1,25 +1,92 @@
 //sccss page restaurant 1-4
 
 /*----------------------------------------------------------------------main */
+// main
+// {
+//     height: 100%;
+// }
+
 // -------------------------dimension et position image  
 .bloc-image, img
 {
     width: 100%;
     object-fit: cover;
-    height: 49vw;
+    height: 60vw;
     max-height: 500px;
     z-index: -1;
+
+    @media (min-width: 319px) and (max-width: 768px)
+    {
+        height: 230px;
+    }
+
 }
 
 // ---------------------------Menu
 .container__menu
 {
     background-color: $graylite;
-    padding-top: 10px;
-    border-radius: 50px;
-
+    padding-top: 3px;
+    border-radius: 40px 40px 0 0;
+    
     position: relative;
-    transform: translateY(-50px);
+    // transform: translateY(-4%); //à régler avant de valider resposive full ok (double image ?)
+    top: -45px;
+
+    h2
+    {
+        font-size: clamp(15px, 5vw, 25px);
+        padding-bottom: 15px;
+        margin-left: 15px;// suit le bloc menu card pour la valeur depositionnement
+    }
 }
 
+// -----------------------------créer l'enveloppe des card
+.menu__card
+{
+    height: auto;
+    width: 90%;
+    background-color: white;
+    padding: 7px;    
+    border-radius: 15px;
+    margin:0 auto 15px auto;
+
+    // ---------------------------- à l'intérieur du bloc text + price
+    &--text
+    {
+        
+        //positionnement bloc
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    
+    &--price
+    {
+        color: red;
+        font-weight: 900;
+        transform: translateX(-50%);
+    }
+}
+
+.menu
+{
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    
+
+    &--restaurant
+    {
+        width: clamp(320px, 5vw, 500px);// (-15px pour 320 min-width)
+        padding-bottom: 25px; //espace les section restaurants
+        // margin-right: clamp(0px, 5vw, 50px);    
+        
+    }
+}
 
