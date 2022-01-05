@@ -7,4 +7,15 @@
     
 }
 
+// ------------------------------
+//mixin général pour un positionnement
+@mixin pseudo-pos {
+    content: "\f004"; 
+    position: absolute; //ne pas oublier de mettre le parent en "relavive"
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+}
 

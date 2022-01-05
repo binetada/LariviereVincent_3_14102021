@@ -189,14 +189,14 @@
     border-radius: 20px;
     box-shadow: 0 4px 10px gray;
     position: relative;//pour le tag-new
-
+    
 }
 
 .box__card--header img // rien ne se passe si je n'interviens pas sur l'image /!\ pas de cover possible sur un div !
 {
     width: 100%;
     object-fit: cover;
-    height: clamp(15vw, 30vw, 20vw);
+    height: clamp(15vw, 10vw, 200px);
     border-radius: 20px 20px 0 0;
 
 }
@@ -206,16 +206,18 @@
     display: flex;
     justify-content: space-between;
     line-height: 1;
+    
 
     
     .fa-heart
     {
         transform: translateX(-50%);
         font-size: 1.2em;
+        width: 10%; // permet de ne pas couper l'arète droite du coeur
         
         @media (min-width: 1500px)
         {
-            transform: translateX(-150%);
+            transform: translateX(-100%);
         }
 
         @media (max-width: 768px)
@@ -230,7 +232,7 @@
 {
     margin: 5px 0 5px 15px;
     line-height: 30px;
-    font-size: clamp(15px, 5vw, 22px);//20px;
+    font-size: clamp(15px, 5vw, 42px);//20px;
 }
 
 .tag-new 

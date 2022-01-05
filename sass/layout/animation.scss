@@ -1,0 +1,59 @@
+//----------------------------------------------------------------------------ANIMATION HEART HOVER
+.fa-heart
+{
+    z-index: 1;
+    text-align: center; 
+           
+
+    position: relative;//position pour absolute de fa-heart::after
+    color: black;
+    scale: 1;
+        &:hover
+        {
+            cursor: pointer;
+                
+                &::after//fait apparaitre le fond red
+                {
+                    opacity: 1; 
+                    scale: 1.03;
+                    
+                }
+                &::before//fait disparaitre le coeur noir
+                {
+                    opacity: 0;
+                    transition: opacity 250ms ease-in; 
+                    
+                }
+        }
+
+        &::after //j'instancie le 'div' invisible (sans créer de div html) avec arguments
+        {
+            @include pseudo-pos; // arguments de base pour une position after
+            
+            font-weight: bold; //rempli le fond de l'icone
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 250ms ease-in;
+            scale: .96;
+            //--------------------------------------------------------------------------------
+            //permet le changement de couleur, mais je ne comprends pas totalement pourquoi...
+            // background: linear-gradient(12deg,$secondary 0%,$primary 100%);
+            background: linear-gradient(0deg,$secondary 25%,$primary 100%);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            //---------------------------------------------------------------------------------
+        }
+}
+
+.box-card
+{
+    transition: transform 250ms ease-in-out;
+    transform: scale(1);
+    z-index: 0;
+        &:hover
+        {
+            scale: (1.03);
+            z-index: 2;
+        }
+}
