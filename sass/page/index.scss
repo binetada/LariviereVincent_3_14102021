@@ -92,7 +92,7 @@
     h3 {
         margin-left: 15px;
         margin-bottom: 15px;
-        font-weight: 900;
+        font-weight: 700;
         
         @media (min-width:768px) {
             
@@ -125,7 +125,12 @@
             }
         }
         
-    }  
+    }
+    
+    .fas //espace à gauche pour les icones de fonctionnement
+    {
+        margin-left: 20px;
+    }
     
 }
 
@@ -150,6 +155,7 @@
       
 }
 
+
 /*---------------------------------------------restaurant--------------------------------------*/
 
 
@@ -165,6 +171,7 @@
     text-align: center;
     font-size: clamp(20px, 5vw, 20px);
     margin-bottom: 50px;
+    padding-top: 20px;
 }
 
 .container__choice-restaurant //row
@@ -232,7 +239,8 @@
 {
     margin: 5px 0 5px 15px;
     line-height: 30px;
-    font-size: clamp(15px, 5vw, 42px);//20px;
+    font-size: clamp(15px, 2.5vw, 32px);//20px;
+    padding-bottom: 1%;
 }
 
 .tag-new 
@@ -244,7 +252,7 @@
     font-weight: bold;
     font-size: clamp(10px, 5vw, 20px);
     text-align: center;
-    width: clamp(5vw85, 15vw, 200px); //50%;
+    // width: clamp(5vw85, 15vw, 200px); //50%;
 
     // initialisation et position du tag (card en relative, lui en absolute)
     position: absolute;
@@ -255,13 +263,13 @@
         @media (min-width: 992px)
         {
             transform: translate(-20%, 85%);
-            width: 25%;
+            width: 100px;
         }
     
 }
 // ------------------------------------------------------------------------responsive card version OC /!\
 // ---------------------------------
-@media screen and (max-width: 620px) 
+@media screen and (max-width: 620px) // en-dessous de 620px
 {
     .container-restaurant
     {
