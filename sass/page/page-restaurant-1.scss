@@ -179,7 +179,65 @@
 }
 // fin menu card
 
+/*------------Animation card menu lors du chargement de la page----------------------------------*/
 
+.entree
+{
+    animation-name: animation_card;
+    animation-duration: 0.33s;
+}
+
+.plat
+{
+    animation-name: animation_card;
+    animation-duration: 0.63s;
+}
+
+.dessert
+{
+    animation-name: animation_card;
+    animation-duration: 1.03s;
+}
+
+
+.menu__card
+{ 
+
+    &.anim--1
+    {
+        animation-name: animation_card;
+        animation-duration: 0.3s;
+    }
+
+    &.anim--2
+    {
+        animation-name: animation_card;
+        animation-duration: 0.6s;
+    }
+
+    &.anim--3
+    {
+        animation-name: animation_card;
+        animation-duration: 1s;
+    }
+}
+
+
+@keyframes animation_card 
+{
+    from 
+    {
+        // scale:(0);
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to 
+    {
+        // scale:(1);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 // // --------------------------------------------------------------------------Menu
 // .container__menu
