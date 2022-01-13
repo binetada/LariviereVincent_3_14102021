@@ -26,7 +26,6 @@
 }
 
 
-
 // -------------------------dimension et position image  
 .bloc-image, img
 {
@@ -56,7 +55,7 @@
 
     &--restaurant
     {
-        width: clamp(320px, 5vw, 500px);// (-15px pour 320 min-width)
+        width: clamp(320px, 50vw, 420px);
         padding-bottom: 25px; //espace les section restaurants
         // margin-right: clamp(0px, 5vw, 50px);    
         
@@ -149,7 +148,7 @@
 {
     height: auto;
     width: 90%;
-    max-width: 400px;
+    max-width: 600px;
     background-color: white;
     // padding: 7px;    
     border-radius: 15px;
