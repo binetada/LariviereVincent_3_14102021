@@ -9,6 +9,8 @@ body
     flex-wrap: wrap;
     flex-direction: column;
     z-index: 0;
+    width: 100%;
+    max-width: 1500px;
    
     margin: 0 auto;
     
@@ -16,9 +18,7 @@ body
             width: 100%;
             
         }
-    
-    
-        
+       
 }
 
 

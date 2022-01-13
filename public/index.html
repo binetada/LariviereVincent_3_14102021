@@ -25,154 +25,156 @@
     </head>
     <!---------------------------------------------------------------------------------BODY--------------------------------------------------------------->
     <body>
-        <!-------------------------------------------------------------------------------HEADER------------------------------------------------------------->
-        <header>
-            <!-- Logo -->
-            <h1 class="header-logo">Ohmyfood</h1> 
-            <hr>
-        </header>
-            
-        <!---------------------------------------------------------------------------------MAIN--------------------------------------------------------------->
-        <main>
-            <section class="box">
-                <!-- Localisation -->
-                <div class ="box__geo-localisation">
-                    <i class="fas fa-map-marker-alt"></i> 
-                    <p class="box__geo-localisation--bold">Paris, Belleville</p>
-                </div>
+        <!---------------------------------------------- Animation loader-->
+        <div class=" animation__loader">            
+            <span class="animation__loader--spinner"></span>             
+        </div>
 
-                <!-- ----------------------------------------------------------------------------Navigation -->
-                <nav class="explore">
-                    <h2> Réservez le menu qui vous convient</h2> 
-                    <p> Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                    <button class="btn__explore" type="button">Explorer nos restaurants</button>   
-                </nav> 
-
-            </section>
-
-            <!-- -------------------------------------------------------------------------------Section Fonctionnement -->
-            <section class="box-fonction"> 
-                <h3>Fonctionnement</h3>
-                <!--Contenant des buttons fonctionnement-->
-                <div class="box-fonction__choice">
-                    
-                    <!-- Bouton 1-->
-                     
-                    <button class="box-fonction__btn" type="button">
-                        <span class="box-fonction__chiffre">1</span>
-                        <i class="fas fa-mobile-alt "></i>
-                        Choissisez un restaurant
-                    </button>
-
-                    <!-- Bouton 2-->
-                    
-                    <button class="box-fonction__btn" type="button"> 
-                        <span class="box-fonction__chiffre">2</span>
-                        <i class="fas fa-list-ul "></i>
-                        Composez votre menu
-                    </button>
-
-                    <!-- Bouton 3-->
-                    
-                    <button class="box-fonction__btn" type="button"> 
-                        <span class="box-fonction__chiffre">3</span>
-                        <i class="fas fa-store "></i>
-                        Dégustez au restaurant
-                    </button>
-
-                </div>
+        <div class="index-hidden">
+            <!-------------------------------------------------------------------------------HEADER------------------------------------------------------------->
+            <header>
+                <!-- Logo -->
+                <h1 class="header-logo">Ohmyfood</h1> 
+                <hr>
+            </header>
                 
-
-            
-
-            </section>
-            <!-- -------------------------------------------------------------------------------Section Restaurant -->
-            <section class="container-restaurant">
-
-                <div class="heading-titre">
-                    <h1>Restaurants</h1>
-                </div>
-                <!--contenu d'aligenement des cards -->
-                    <div class="container__choice-restaurant"> <!-- c'est qui aligne les cards (x et/ou y) -->
-                        <!-- -------------------------------------------------------------------------------------------card 1 -->
-                        <div class="box-card">
-                            <a href="page-menu.html">
-                            <div class="box__card--header"> 
-                                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-                            </div>
-                            <div class="box__card--footer">
-                                <div class="text-card-title"><h4>La palette du goût</h4> <i class="far fa-heart"></i></div>
-                                <p> Ménilmontant </p>
-                            </div>
-                            <span class="tag-new">Nouveau</span>
-                            </a>
-                        </div>    
-
-                        <!-- -------------------------------------------------------------------------------------------card 2 -->
-                        <div class="box-card">
-                            <a href="page-menu-2.html">
-                            <div class="box__card--header"> 
-                                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
-                            </div>
-                            <div class="box__card--footer">
-                                <div class="text-card-title"><h4>La note enchantée</h4> <i class="far fa-heart"></i></div>
-                                <p> Charonne </p>
-                            </div>
-                            <span class="tag-new">Nouveau</span>
-                            </a>
-                        </div>     
-
-                        <!-- -------------------------------------------------------------------------------------------card 3 -->
-                        <div class="box-card">
-                            <a href="page-menu-3.html">
-                            <div class="box__card--header"> 
-                                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
-                            </div>
-                            <div class="box__card--footer">
-                                <div class="text-card-title"><h4>À la française</h4> <i class="far fa-heart"></i></div>
-                                <p> Cité Rouge </p>
-                            </div>
-                            <span class="tag-new">Nouveau</span>
-                            </a>
-                        </div>    
-
-                        <!-- -------------------------------------------------------------------------------------------card 4 -->
-                        <div class="box-card">
-                            <a href="page-menu-4.html">
-                            <div class="box__card--header"> 
-                                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-                            </div>
-                            <div class="box__card--footer">
-                                <div class="text-card-title"><h4>Le délice des sens</h4> <i class="far fa-heart"></i></div>
-                                <p> Folie-Méricourt </p>
-                            </div>
-                            <span class="tag-new">Nouveau</span>
-                            </a>
-                        </div>    
-                            
-
-
+            <!---------------------------------------------------------------------------------MAIN--------------------------------------------------------------->
+            <main>
+                <section class="box">
+                    <!-- Localisation -->
+                    <div class ="box__geo-localisation">
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <p class="box__geo-localisation--bold">Paris, Belleville</p>
                     </div>
 
+                    <!-- ----------------------------------------------------------------------------Navigation -->
+                    <nav class="explore">
+                        <h2> Réservez le menu qui vous convient</h2> 
+                        <p> Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                        <button class="btn__explore" type="button">Explorer nos restaurants</button>   
+                    </nav> 
 
-            </section>
+                </section>
 
-        </main>
+                <!-- -------------------------------------------------------------------------------Section Fonctionnement -->
+                <section class="box-fonction"> 
+                    <h3>Fonctionnement</h3>
+                    <!--Contenant des buttons fonctionnement-->
+                    <div class="box-fonction__choice">
+                        
+                        <!-- Bouton 1-->
+                        
+                        <button class="box-fonction__btn" type="button">
+                            <span class="box-fonction__chiffre">1</span>
+                            <i class="fas fa-mobile-alt "></i>
+                            Choissisez un restaurant
+                        </button>
 
-        <!---------------------------------------------------------------------------------FOOTER------------------------------------------------------------->
-        <footer>
-            <div >
-                <span class="footer__title">Ohmyfood</span>
-                <div class="footer__text">
-                    <a href="#"> <i class="fas fa-utensils"></i>Proposer un restaurant </a> 
-                    <a href="#"> <i class="fas fa-hands-helping"></i>Devenir partenaire </a> 
-                    <a href="#"> Mention légales</a>
-                    <a href="#"> Contact </a> 
-                </div>
-            </div>
-        </footer>
+                        <!-- Bouton 2-->
+                        
+                        <button class="box-fonction__btn" type="button"> 
+                            <span class="box-fonction__chiffre">2</span>
+                            <i class="fas fa-list-ul "></i>
+                            Composez votre menu
+                        </button>
+
+                        <!-- Bouton 3-->
+                        
+                        <button class="box-fonction__btn" type="button"> 
+                            <span class="box-fonction__chiffre">3</span>
+                            <i class="fas fa-store "></i>
+                            Dégustez au restaurant
+                        </button>
+
+                    </div>
+                    
+
+                
+
+                </section>
+                <!-- -------------------------------------------------------------------------------Section Restaurant -->
+                <section class="container-restaurant">
+
+                    <div class="heading-titre">
+                        <h1>Restaurants</h1>
+                    </div>
+                    <!--contenu d'aligenement des cards -->
+                        <div class="container__choice-restaurant"> <!-- c'est qui aligne les cards (x et/ou y) -->
+                            <!-- -------------------------------------------------------------------------------------------card 1 -->
+                            <div class="box-card">
+                                <a href="page-menu.html">
+                                <div class="box__card--header"> 
+                                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                                </div>
+                                <div class="box__card--footer">
+                                    <div class="text-card-title"><h4>La palette du goût</h4> <i class="far fa-heart"></i></div>
+                                    <p> Ménilmontant </p>
+                                </div>
+                                <span class="tag-new">Nouveau</span>
+                                </a>
+                            </div>    
+
+                            <!-- -------------------------------------------------------------------------------------------card 2 -->
+                            <div class="box-card">
+                                <a href="page-menu-2.html">
+                                <div class="box__card--header"> 
+                                    <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                                </div>
+                                <div class="box__card--footer">
+                                    <div class="text-card-title"><h4>La note enchantée</h4> <i class="far fa-heart"></i></div>
+                                    <p> Charonne </p>
+                                </div>
+                                <span class="tag-new">Nouveau</span>
+                                </a>
+                            </div>     
+
+                            <!-- -------------------------------------------------------------------------------------------card 3 -->
+                            <div class="box-card">
+                                <a href="page-menu-3.html">
+                                <div class="box__card--header"> 
+                                    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                                </div>
+                                <div class="box__card--footer">
+                                    <div class="text-card-title"><h4>À la française</h4> <i class="far fa-heart"></i></div>
+                                    <p> Cité Rouge </p>
+                                </div>
+                                <span class="tag-new">Nouveau</span>
+                                </a>
+                            </div>    
+
+                            <!-- -------------------------------------------------------------------------------------------card 4 -->
+                            <div class="box-card">
+                                <a href="page-menu-4.html">
+                                <div class="box__card--header"> 
+                                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                                </div>
+                                <div class="box__card--footer">
+                                    <div class="text-card-title"><h4>Le délice des sens</h4> <i class="far fa-heart"></i></div>
+                                    <p> Folie-Méricourt </p>
+                                </div>
+                                <span class="tag-new">Nouveau</span>
+                                </a>
+                            </div>    
+                                
+                        </div>
+                </section>
+                
+            </main>
             
-
+            <!---------------------------------------------------------------------------------FOOTER------------------------------------------------------------->
+            <footer>
+                <div >
+                    <span class="footer__title">Ohmyfood</span>
+                    <div class="footer__text">
+                        <a href="#"> <i class="fas fa-utensils"></i>Proposer un restaurant </a> 
+                        <a href="#"> <i class="fas fa-hands-helping"></i>Devenir partenaire </a> 
+                        <a href="#"> Mention légales</a>
+                        <a href="#"> Contact </a> 
+                    </div>
+                </div>
+            </footer>
+            
+        </div>
     </body>
 
 </html>

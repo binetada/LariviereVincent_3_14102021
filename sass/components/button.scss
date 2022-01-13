@@ -6,7 +6,6 @@ button
     background-color: transparent;
     border: none;
     
-    
 }
  // ----------------------------------------------------------------------------bouton explore/commande
 .btn__explore 
@@ -36,8 +35,6 @@ button
             font-size: 15px;
             margin-top: 10px;
         }
-
-        
 }
 
 .bloc-btn-commander
@@ -93,6 +90,11 @@ button
             background: #fcf1ff;
             transform: scale(1.01);      
             /*transition: all 1s ease-out;*/
+
+            .fas
+            {
+                color: $primary;
+            }
 
         }    
     
