@@ -20,7 +20,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap" rel="stylesheet"> 
         
     </head>
     <!---------------------------------------------------------------------------------BODY--------------------------------------------------------------->
@@ -41,7 +41,7 @@
                     <p class="box__geo-localisation--bold">Paris, Belleville</p>
                 </div>
 
-                <!-- Navigation -->
+                <!-- ----------------------------------------------------------------------------Navigation -->
                 <nav class="explore">
                     <h2> Réservez le menu qui vous convient</h2> 
                     <p> Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
@@ -50,7 +50,7 @@
 
             </section>
 
-            <!-- Section Fonctionnement -->
+            <!-- -------------------------------------------------------------------------------Section Fonctionnement -->
             <section class="box-fonction"> 
                 <h3>Fonctionnement</h3>
                 <!--Contenant des buttons fonctionnement-->
@@ -81,86 +81,79 @@
                     </button>
 
                 </div>
+                
 
+            
 
             </section>
+            <!-- -------------------------------------------------------------------------------Section Restaurant -->
+            <section class="container-restaurant">
 
-            <!-- Section choix restaurants-->
-            <section class="box_restaurant">
-                <h3> Restaurants</h3>
-                <!-- Contenant des carte restaurant interne-->
-                <div class="box__choice-restaurant">
-                    <!--Article incrustable dans l'aside d'autres site-->
-
-                    
-                    <!--Card numéro 1-->
-                    <article class="box__card">
-                        
-                        <figure>
-                            
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
-                            <figcaption> 
-                                <div class="box__card--header">
-                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
-                                    <p class="box__card--text"> Ménilmontant</p>
-                                </div>
-                            </figcaption>  
-                                                  
-                        </figure>
-                        <!--<span class="card--tag">Nouveau</span>-->
-                    </article>
-
-                     <!--Card numéro 2-->
-                     <article class="box__card">
-                        <figure>
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
-                            <figcaption> 
-                                <div class="box__card--header">
-                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
-                                    <p class="text-card"> Ménilmontant</p>
-                                </div>                         
-                            </figcaption>      
-                                              
-                        </figure>
-                        
-                    </article>
-                    
-
-                                        
-                     <!--Card numéro 3-->
-                     <article class="box__card">
-                        <figure>
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
-                            <figcaption> 
-                                <div class="box__card--header">
-                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
-                                    <p class="text-card"> Ménilmontant</p>
-                                </div>
-                                
-                            </figcaption>
-                        
-                        </figure>
-                        
-                    </article>
-                    
-                     <!--Card numéro 4-->
-                     <article class="box__card">
-                        
-                        <figure>
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" title="" class="pic-restaurant">
-                            <figcaption> 
-                                <div class="box__card--header">
-                                    <span class="--block-head-heart"><h4 >La palette du goût</h4><i class="far fa-heart"></i></span>
-                                    <p class="text-card"> Ménilmontant</p>
-                                </div>
-                                
-                            </figcaption>
-                            
-                        </figure>
-                        
-                    </article>
-                    
+                <div class="heading-titre">
+                    <h1>Restaurants</h1>
                 </div>
+                <!--contenu d'aligenement des cards -->
+                    <div class="container__choice-restaurant"> <!-- c'est qui aligne les cards (x et/ou y) -->
+                        <!-- -------------------------------------------------------------------------------------------card 1 -->
+                        <div class="box-card">
+                            <a href="page-menu.html">
+                            <div class="box__card--header"> 
+                                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                            </div>
+                            <div class="box__card--footer">
+                                <div class="text-card-title"><h4>La palette du goût</h4> <i class="far fa-heart"></i></div>
+                                <p> Ménilmontant </p>
+                            </div>
+                            <span class="tag-new">Nouveau</span>
+                            </a>
+                        </div>    
+
+                        <!-- -------------------------------------------------------------------------------------------card 2 -->
+                        <div class="box-card">
+                            <a href="page-menu-2.html">
+                            <div class="box__card--header"> 
+                                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                            </div>
+                            <div class="box__card--footer">
+                                <div class="text-card-title"><h4>La note enchantée</h4> <i class="far fa-heart"></i></div>
+                                <p> Charonne </p>
+                            </div>
+                            <span class="tag-new">Nouveau</span>
+                            </a>
+                        </div>     
+
+                        <!-- -------------------------------------------------------------------------------------------card 3 -->
+                        <div class="box-card">
+                            <a href="page-menu-3.html">
+                            <div class="box__card--header"> 
+                                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                            </div>
+                            <div class="box__card--footer">
+                                <div class="text-card-title"><h4>À la française</h4> <i class="far fa-heart"></i></div>
+                                <p> Cité Rouge </p>
+                            </div>
+                            <span class="tag-new">Nouveau</span>
+                            </a>
+                        </div>    
+
+                        <!-- -------------------------------------------------------------------------------------------card 4 -->
+                        <div class="box-card">
+                            <a href="page-menu-4.html">
+                            <div class="box__card--header"> 
+                                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                            </div>
+                            <div class="box__card--footer">
+                                <div class="text-card-title"><h4>Le délice des sens</h4> <i class="far fa-heart"></i></div>
+                                <p> Folie-Méricourt </p>
+                            </div>
+                            <span class="tag-new">Nouveau</span>
+                            </a>
+                        </div>    
+                            
+
+
+                    </div>
+
 
             </section>
 
@@ -169,7 +162,7 @@
         <!---------------------------------------------------------------------------------FOOTER------------------------------------------------------------->
         <footer>
             <div >
-                <h3>Ohmyfood</h3>
+                <span class="footer__title">Ohmyfood</span>
                 <div class="footer__text">
                     <a href="#"> <i class="fas fa-utensils"></i>Proposer un restaurant </a> 
                     <a href="#"> <i class="fas fa-hands-helping"></i>Devenir partenaire </a> 

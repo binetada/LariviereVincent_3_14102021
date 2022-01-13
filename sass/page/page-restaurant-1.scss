@@ -1,0 +1,314 @@
+//sccss page restaurant 1-4
+
+/*----------------------------------------------------------------------main */
+// main
+// {
+//     height: 100%;
+// }
+
+
+
+.menu--restaurant 
+{
+
+    h2
+    {
+        font-size: clamp(15px, 5vw, 20px);
+        padding-bottom: 2px;
+        margin-left: 15px;// suit le bloc menu card pour la valeur depositionnement
+        margin-bottom: 15px;
+        font-weight: lighter;
+        width: 15%;
+        border-bottom: 2px solid $tertiary;
+        
+    }
+
+}
+
+
+// -------------------------dimension et position image  
+.bloc-image, img
+{
+    width: 100%;
+    object-fit: cover;
+    height: 60vw;
+    max-height: 500px;
+    z-index: -1;
+
+    @media (min-width: 319px) and (max-width: 768px)
+    {
+        height: 230px;
+    }
+
+}
+
+/// ---------------------------------------------------------------------------------------Menu
+.menu
+{
+    width: 100%;
+    // padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    
+
+    &--restaurant
+    {
+        width: clamp(320px, 50vw, 420px);
+        padding-bottom: 25px; //espace les section restaurants
+        // margin-right: clamp(0px, 5vw, 50px);    
+        
+    }
+}
+
+
+
+
+.container__menu
+{
+    background-color: $graylite;
+    padding-top: 3px;
+    border-radius: 40px 40px 0 0;
+    
+    position: relative;
+    transform: translateY(-4%); //à régler avant de valider resposive full ok (double image ?)
+    // top: -45px;
+
+    
+}
+
+// ---------------------------- à l'intérieur du bloc text + price
+.menu__card--text 
+{
+    width: 50px; //quand je modie ici, ellipsis fonctionne
+    //positionnement bloc
+    line-height: 1.2;
+    // position: relative;
+    flex-grow: 1;
+    // width: 90%; ne pas mettre de width sinon le texte ne tronque pas
+    background-color: white;
+    padding: 8px;
+       
+    h3, p
+    {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        // resize: horizontal;
+    }
+}
+    
+.menu__card--price
+{
+    // width: 4em;
+    font-weight: bold;
+    background-color: pink;
+    // margin-right: 2em;
+    // border: 1px solid red;
+    // transition: transform 500ms ease-in-out;
+    line-height: 5;
+    height: 0;
+    margin-right: 10px;
+}
+
+.bo 
+{
+
+    display: flex;
+    width: 0;
+    transition: all 0.5s;
+    
+    .menu__card--validation
+    {
+        width: 100%;
+        // margin: auto;
+        height: inherit;
+        background-color: aqua;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 9px; //zone interne icone check
+
+            .fa-check-circle
+            {
+                // transition: transform 500ms ease-in-out;
+                transform: rotate(0deg);
+                transition-duration: 0.5s;
+                color: white;
+                font-size: 1.2em;
+            }
+
+    }
+}
+
+// -----------------------------créé l'enveloppe des cards
+.menu__card
+{
+    height: auto;
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    // padding: 7px;    
+    border-radius: 15px;
+    margin:0 auto 15px auto;
+
+    // dispose les éléments
+    display: flex;
+    cursor: pointer;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:hover > .bo
+    {
+        width: 2.8em;
+        transition-duration: 0.5s;
+
+        .fa-check-circle
+        {
+            transform: rotate(720deg);
+            // transform: translateX(-50%); 
+        }
+            
+      
+    }
+}
+// fin menu card
+
+/*------------Animation card menu lors du chargement de la page----------------------------------*/
+
+.entree
+{
+    animation-name: animation_card;
+    animation-duration: 0.33s;
+}
+
+.plat
+{
+    animation-name: animation_card;
+    animation-duration: 0.63s;
+}
+
+.dessert
+{
+    animation-name: animation_card;
+    animation-duration: 1.03s;
+}
+
+
+.menu__card
+{ 
+
+    &.anim--1
+    {
+        animation-name: animation_card;
+        animation-duration: 0.3s;
+    }
+
+    &.anim--2
+    {
+        animation-name: animation_card;
+        animation-duration: 0.6s;
+    }
+
+    &.anim--3
+    {
+        animation-name: animation_card;
+        animation-duration: 1s;
+    }
+}
+
+
+@keyframes animation_card 
+{
+    from 
+    {
+        // scale:(0);
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to 
+    {
+        // scale:(1);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// // --------------------------------------------------------------------------Menu
+// .container__menu
+// {
+//     background-color: $graylite;
+//     padding-top: 3px;
+//     border-radius: 40px 40px 0 0;
+    
+//     position: relative;
+//     // transform: translateY(-4%); //à régler avant de valider resposive full ok (double image ?)
+//     top: -45px;
+
+//     h2
+//     {
+//         font-size: clamp(15px, 5vw, 20px);
+//         padding-bottom: 2px;
+//         margin-left: 15px;// suit le bloc menu card pour la valeur depositionnement
+//         margin-bottom: 15px;
+//         font-weight: lighter;
+//         width: 15%;
+//         border-bottom: 2px solid $tertiary;
+        
+//     }
+// }
+
+// // -----------------------------créer l'enveloppe des card
+// .menu__card
+// {
+//     height: auto;
+//     width: 90%;
+//     background-color: white;
+//     padding: 7px;    
+//     border-radius: 15px;
+//     margin:0 auto 15px auto;
+
+//     // ---------------------------- à l'intérieur du bloc text + price
+//     &--text
+//     {
+        
+//         //positionnement bloc
+//         display: flex;
+//         flex-wrap: wrap;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         line-height: 1.38;
+
+//     }
+    
+//     &--price
+//     {
+        
+//         font-weight: 900;
+//         transform: translateX(-50%);
+//     }
+// }
+
+// .menu
+// {
+//     width: 100%;
+//     padding-bottom: 50px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: row;
+//     justify-content: center;
+    
+
+//     &--restaurant
+//     {
+//         width: clamp(320px, 5vw, 500px);// (-15px pour 320 min-width)
+//         padding-bottom: 25px; //espace les section restaurants
+//         // margin-right: clamp(0px, 5vw, 50px);    
+        
+//     }
+// }
+
