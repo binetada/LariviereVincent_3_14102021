@@ -15,6 +15,7 @@ header
                 align-items: center;
                 font-family: 'Shrikhand', cursive;  
                 position: relative;
+                padding: 6px 0;
 
                 font-size: clamp(25px, 5vw, 50px);//MQ taille logo
                         .fa-arrow-left
@@ -42,25 +43,27 @@ header
 }
 
 // permet de gérer le header des page restaurants (cumul effet des valeur sup dans 'header')
-.box-header a
-{
+// .box-header a
+// {
 
-    // position: absolute;
-    // transform: translate(100%, 70%); // (droite(+)/gauche(-), bas(+)/haut(-))
-    // transition: transform 350ms ease-in-out, backgroud-color 350ms ease-in-out;
+//     // position: absolute;
+//     // transform: translate(100%, 70%); // (droite(+)/gauche(-), bas(+)/haut(-))
+//     // transition: transform 350ms ease-in-out, backgroud-color 350ms ease-in-out;
 
     
-}
+// }
 
 
 
 hr 
 {
    width: 100%;
-   height: 4px;
+   height: 5px;
    border: none;
    background-color: gray;
-   background: linear-gradient(to bottom, gray 0%, $graydark  100%);
+   background: linear-gradient(to bottom, rgb(172, 172, 172) 0%, $graydark 70%);
+//    box-shadow: 0px 5px 10px $graydark;
+z-index: 10;
    
 }
 

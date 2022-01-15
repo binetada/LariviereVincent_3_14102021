@@ -3,8 +3,7 @@
  En d’autres termes, pages/ contient des règles spécifiques à une seule page qui ne seront pas réutilisées ailleurs ;*/
 
 .box
-{
-    
+{    
     width: 100%;
     height: 300px;
     background-color: $graylite;
@@ -57,6 +56,7 @@
    
     h2 {
         width: 250px;
+        font-weight: 900;
         
         @media (min-width: 768px)
         {
@@ -66,6 +66,7 @@
     }
     
     p {
+        font-weight: 100;
         margin: 20px 0; 
     }
     
@@ -81,16 +82,18 @@
     height: 300px;
     margin: 30px 0;
     
-    @media (min-width: 1100px) {
+    @media (min-width: 1100px) 
+    {
         height: 200px;
-        @media (min-width: 1300px) { 
+        @media (min-width: 1300px) 
+        { 
             height: 120px;
         }
         
     }
     
     h3 {
-        margin-left: 15px;
+        margin-left: 20px;
         margin-bottom: 15px;
         font-weight: 700;
         
@@ -129,7 +132,8 @@
     
     .fas //espace à gauche pour les icones de fonctionnement
     {
-        margin-left: 20px;
+        margin: inherit auto;
+       
     }
     
 }
@@ -139,7 +143,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    line-height: 0;
+
     z-index: 2;
     background-color: $primary;
     width: 20px;
@@ -168,10 +173,16 @@
 
 .heading-titre
 {
-    text-align: center;
-    font-size: clamp(20px, 5vw, 20px);
-    margin-bottom: 50px;
-    padding-top: 20px;
+    margin-left: 20px;
+    font-size: clamp(15px, 4vw, 30px);
+    margin-bottom: 30px;
+    padding-top: 40px;
+
+    @media(min-width: 768px)
+    {
+        text-align: center;
+        padding-bottom: 20px;
+    }
 }
 
 .container__choice-restaurant //row
@@ -182,13 +193,13 @@
     flex-direction: row;
     justify-content: space-around;
     margin: 0 auto;
-    width: 95%;
+    width: 100%;
     
 }
 
 .box-card
 {
-    width: 45%; // très important ! Administre la taille des card en fonction du width du container général ! (95%)
+    width: 40%; // très important ! Administre la taille des card en fonction du width du container général ! (95%)
     background: white;
     margin-bottom: 30px;
     transition: 0.3s;// permet une jolie transition responsive
@@ -213,15 +224,16 @@
     display: flex;
     justify-content: space-between;
     line-height: 1;
+    font-weight: 100;
     
 
     
     .fa-heart
     {
         transform: translateX(-50%);
-        font-size: 1.2em;
+        font-size: 1.5em;
         width: 10%; // permet de ne pas couper l'arète droite du coeur
-        
+    
         @media (min-width: 1500px)
         {
             transform: translateX(-100%);
@@ -238,8 +250,8 @@
 .box__card--footer
 {
     margin: 5px 0 5px 15px;
-    line-height: 30px;
-    font-size: clamp(15px, 2.5vw, 32px);//20px;
+    line-height: 25px;
+    font-size: clamp(15px, 5vw, 20px);//20px;
     padding-bottom: 1%;
 }
 
@@ -250,7 +262,7 @@
     color: #278870;
     padding: 4px;
     font-weight: bold;
-    font-size: clamp(10px, 5vw, 20px);
+    font-size: clamp(5px, 4vw, 20px);
     text-align: center;
     // width: clamp(5vw85, 15vw, 200px); //50%;
 
@@ -258,7 +270,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-20%, 50%);
+    transform: translate(-25%, 50%);
 
         @media (min-width: 992px)
         {

@@ -14,18 +14,23 @@ button
     width: 200px;
     height: 50px;
     color: white;
-    background: linear-gradient($secondary, $primary);
+    background: linear-gradient(180deg, $secondary, $primary);
     border-radius: 50px;
-    box-shadow: 0px 0px 3px gray;
+    box-shadow: 0.5px 3px 3px gray;
     font-weight: bolder; 
+    // transform: scale(1);
+    
             
         &:hover 
         {
             cursor: pointer; 
-            box-shadow: 0px 0px 3px $secondary;
-            background: linear-gradient($primary,$secondary);
-            transform: scale(1.02);
-            /*transition: all 1s ease-out;*/
+            box-shadow: 1px 3px 8px gray;
+            // background: linear-gradient($primary,$secondary);
+            filter: brightness(110%);
+            color: lighten($color: white, $amount: 50%);
+            // transform: scale(1.01);
+            transition: transform 350ms ease-in-out;
+            overflow: hidden;
         }
         
         @media (min-width:768px) 
@@ -41,8 +46,7 @@ button
         {
             display:inline-block;
             display: flex;
-            justify-content: center;
-            
+            justify-content: center;           
             padding: 0 0 40px 0;
         }
 

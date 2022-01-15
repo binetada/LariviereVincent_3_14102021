@@ -93,12 +93,15 @@
 {
     0%
     {
-        transform: translateY(100%);
+        transform: translateY(10%);
+        // opacity: 0;
+        visibility: hidden;
     }   
 
     90%
     {
-        transform: translateY(100%);
+        transform: translateY(10%);
+        // opacity: 0;
     }
 
     100% 
@@ -126,7 +129,9 @@
     background: radial-gradient(circle, rgba(2,0,36,1) 10%, rgba(86,109,220,1) 54%, rgba(255,121,218,1) 100%);
     height: 100%;
     width: 100%;
-    position: fixed;
+    position: absolute;
+    top: 0; right: 0;left: 0; bottom: 0;
+    overflow: hidden;
     
 
     // adaptabilité animation multi navigateur (pour les plus anciens)----------------------------
