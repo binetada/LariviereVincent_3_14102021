@@ -5,18 +5,20 @@ footer
     display:  flex;
     flex-direction: column;
     width: 100%;
-    
-
+    height: auto;
+    position: relative;
+    padding-top: 15px;
     .footer__title
     {
         
         margin: 20px 0 0 20px;
         font-family: 'Shrikhand', cursive;
         color: white;
-
+        
         font-size: clamp(19px, 5vw, 30px);
         
-        @media (min-width: 768px) {
+        @media (min-width: 768px) 
+        {
             display: flex;
             justify-content: center;
         }

@@ -1,12 +1,11 @@
 //sccss page restaurant 1-4
 
 /*----------------------------------------------------------------------main */
-// main
-// {
-//     height: ;
-// }
 
-
+main
+{
+    position: relative;
+}
 
 .menu--restaurant 
 {
@@ -31,6 +30,7 @@
 {
     width: 100%;
     object-fit: cover;
+   
     height: 60vw;
     max-height: 500px;
     z-index: -1;
@@ -40,6 +40,15 @@
         height: 230px;
     }
 
+}
+
+.bloc-image
+{
+    
+    position: relative;
+    margin-bottom: -50px; //permetde remonter le container menu... /!\
+    margin-top: -3px;
+    
 }
 
 /// ---------------------------------------------------------------------------------------Menu
@@ -68,8 +77,10 @@
     background-color: $graylite;
     padding-top: 3px;
     border-radius: 40px 40px 0 0;
+    height: 100%;
+    padding-bottom: 40px;
     
-    transform: translateY(-9%); //à régler avant de valider resposive full ok (double image ?)
+    // transform: translateY(-9%); //à régler avant de valider resposive full ok (double image ?)
         
 }
 
@@ -80,10 +91,12 @@
     //positionnement bloc
     line-height: 1.5;
     // position: relative;
+    font-size: small;
     flex-grow: 1;
     // width: 90%; ne pas mettre de width sinon le texte ne tronque pas
     background-color: white;
     padding: 8px;
+    margin-left: 5px;
        
     h3, p
     {
@@ -102,7 +115,7 @@
     // margin-right: 2em;
     // border: 1px solid red;
     // transition: transform 500ms ease-in-out;
-    line-height: 6;
+    line-height: 5;
     height: 0;
     margin-right: 10px;
 }
@@ -147,6 +160,7 @@
     // padding: 7px;    
     border-radius: 15px;
     margin:0 auto 15px auto;
+    box-shadow: 1px 3px 12px rgb(177, 174, 174);
 
     // dispose les éléments
     display: flex;
@@ -158,18 +172,33 @@
 
     &:hover > .bo
     {
-        width: 2.8em;
+        width: 3.5em;
         transition-duration: 0.5s;
 
         .fa-check-circle
         {
-            transform: rotate(720deg);
+            animation: rotation-check 0.5s;
+            // transform: rotate(720deg);
             // transform: translateX(-50%); 
         }
             
     }
+
 }
 // fin menu card
+
+@keyframes rotation-check
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
 
 /*------------Animation card menu lors du chargement de la page----------------------------------*/
 

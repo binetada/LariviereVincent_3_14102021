@@ -61,9 +61,9 @@ hr
    height: 5px;
    border: none;
    background-color: gray;
-   background: linear-gradient(to bottom, rgb(172, 172, 172) 0%, $graydark 70%);
+   background: linear-gradient(to bottom, rgb(133, 133, 133) 0%, $graydark 70%);
 //    box-shadow: 0px 5px 10px $graydark;
-z-index: 10;
+    z-index: -3;
    
 }
 

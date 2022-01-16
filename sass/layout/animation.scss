@@ -1,10 +1,9 @@
-//----------------------------------------------------------------------------ANIMATION HEART HOVER
+//------------------------------------------ANIMATION HEART HOVER
 .fa-heart
 {
     z-index: 1;
     text-align: center; 
            
-
     position: relative;//position pour absolute de fa-heart::after
     color: black;
     transform: scale(1);
@@ -51,16 +50,11 @@
     transition: transform 250ms ease-in-out;
     transform: scale(1);
     z-index: 0;
-        &:hover
+        &:active
         {
-            transform: scale(1.03);
-            
+            transform: scale(1.03);            
         }
 }
-
-
-
-
 
 //----------------------------Animation page pre_load - TRANSITION
 //----------------------------Fait transiter la page pré-chargement
@@ -111,7 +105,6 @@
 }
 
 
-
 //-----------------------------------------ANIMATION SPIN LOADING ET TRANSITION
 //---------------------------------------- code animation
 
@@ -133,7 +126,6 @@
     top: 0; right: 0;left: 0; bottom: 0;
     overflow: hidden;
     
-
     // adaptabilité animation multi navigateur (pour les plus anciens)----------------------------
     -webkit-animation: animation_load 3s;
     -o-animation: animation_load 3s;

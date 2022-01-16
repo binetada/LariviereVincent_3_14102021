@@ -203,7 +203,7 @@
     background: white;
     margin-bottom: 30px;
     transition: 0.3s;// permet une jolie transition responsive
-
+    height: auto;
     border-radius: 20px;
     box-shadow: 0 4px 10px gray;
     position: relative;//pour le tag-new
@@ -214,9 +214,9 @@
 {
     width: 100%;
     object-fit: cover;
-    height: clamp(15vw, 10vw, 200px);
+    object-position: 35% 65%;
+    height: clamp(160px, 10vw, 350px);
     border-radius: 20px 20px 0 0;
-
 }
 
 .text-card-title
@@ -232,6 +232,7 @@
     {
         transform: translateX(-50%);
         font-size: 1.5em;
+        // font-weight: none;
         width: 10%; // permet de ne pas couper l'arète droite du coeur
     
         @media (min-width: 1500px)
@@ -249,10 +250,11 @@
 
 .box__card--footer
 {
-    margin: 5px 0 5px 15px;
-    line-height: 25px;
+    margin: 5px 0 0px 15px;
+    line-height: 15px;
     font-size: clamp(15px, 5vw, 20px);//20px;
-    padding-bottom: 1%;
+    
+    height:55px;
 }
 
 .tag-new 
@@ -287,9 +289,7 @@
     {
         width: 100%;
     }    
-
    
-
     .box-card
     {
         width: 90%;
@@ -298,8 +298,7 @@
     //------------------------------------------------------------------sp
     .box__card--header img
     {
-        height: 40vw; // change la taille des card sans faire déborder le card-footer !
-        
+        // height: 40vw; // change la taille des card sans faire déborder le card-footer !
         
     }
 
