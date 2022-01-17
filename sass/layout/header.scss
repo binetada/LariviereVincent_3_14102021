@@ -1,12 +1,21 @@
-/*layouts/ est le dossier où vous mettez vos blocs BEM qui contiennent ce qui est réutilisable,
- par exemple un header pour les mises en page de grande taille ou un footer ; */
+
+/*Glossaire
+
+    - Header 
+        > Header-logo 
+            > fa arrow
+    - HR
+    - #Logo
+
+*/
+
 header 
 {            
     width: 100%;
     height: auto;
     z-index: 1;
     
-
+        // -----------------------------------------------------header-logo
         .header-logo
             {
                 width: 100%;
@@ -15,56 +24,36 @@ header
                 align-items: center;
                 font-family: 'Shrikhand', cursive;  
                 position: relative;
+                padding: 6px 0;
 
                 font-size: clamp(25px, 5vw, 50px);//MQ taille logo
+                        
+                        // ---------------------------------------fa-arrow
                         .fa-arrow-left
-                            {
-                                
+                            {                               
                                 position: absolute;
-                                // display: inline-block;
                                 left: 0;
                                 top: 0;
                                 transform: translate(100%, 50%);
                                 font-size: 70%; //redimensionnement de arrow
-                                
-                                
-                                
+                                                                
                             }
             }
-
-        @media (min-width:768px) 
-        { 
-            // height: auto;
-            // font-size: 25px;
-        }
-
-         
+       
 }
 
-// permet de gérer le header des page restaurants (cumul effet des valeur sup dans 'header')
-.box-header a
-{
-
-    // position: absolute;
-    // transform: translate(100%, 70%); // (droite(+)/gauche(-), bas(+)/haut(-))
-    // transition: transform 350ms ease-in-out, backgroud-color 350ms ease-in-out;
-
-    
-}
-
-
-
+// --------------------------------------------------------------------------------HR
 hr 
 {
    width: 100%;
-   height: 4px;
+   height: 5px;
    border: none;
    background-color: gray;
-   background: linear-gradient(to bottom, gray 0%, $graydark  100%);
-   
+   background: linear-gradient(to bottom, rgb(133, 133, 133) 0%, $graydark 70%);
+   z-index: -3;
 }
 
-
+// --------------------------------------------------------------------------------LOGO
 #logo
 {
     width: 100%;

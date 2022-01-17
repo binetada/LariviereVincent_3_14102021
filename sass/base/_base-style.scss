@@ -1,6 +1,12 @@
-/*le directory base/ contient les fichiers qui définissent les fondations de votre site, 
-par exemple la police de caractères et les normes que vous voulez appliquer sur tout votre site,
- telles que le box-sizing ; */
+
+/*Glossaire
+
+    - Body
+    - a, ul
+    - * (all > Roboto)
+    - titre restaurant (Shrikhand)
+
+*/
 
 /*--------------------------------------body-------------------------------*/
 body
@@ -9,6 +15,9 @@ body
     flex-wrap: wrap;
     flex-direction: column;
     z-index: 0;
+    width: 100%;
+    max-width: 1500px;
+    // height: 100vh;
    
     margin: 0 auto;
     
@@ -16,9 +25,7 @@ body
             width: 100%;
             
         }
-    
-    
-        
+       
 }
 
 
@@ -49,8 +56,6 @@ a, ul
     margin: 20px 20px;
 
     line-height: 1.2;
-
-    
 
 }
 

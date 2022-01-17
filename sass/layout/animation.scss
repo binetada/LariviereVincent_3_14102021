@@ -1,28 +1,56 @@
-//----------------------------------------------------------------------------ANIMATION HEART HOVER
+/*Glossaire
+--------------------------------------------
+    - Fa heart (animation hover/ after/ before)
+    - box-card (box shadow car pas de directive quand à son animation. J'ai enlevé scale sur le hover)
+    - index-hidden (animation page index post le loading)
+    - animation__loader 
+        > --spinner
+            > After/before (pour effet transition couleur et blur)
+        > spin-2 (seule change la position des spin 2 et 3)
+        > spin-3 //
+--------------------------------------------
+    - @Keyframe spin-loading (rotation > --spinner)
+    - @Keyframe animation_load (transition loader > animation loader)
+    - @Keyframe anim-index (transition index page > index-hidden)
+
+    - ANIMATION DE CHECK VALIDATION
+        - @Keyframe rotation-check
+--------------------------------------------
+    - ANIMATION CHARGEMENT PAGE RESTAURANT MENU
+        - Entree / plat /dessert + délai
+        - menu__card (anim 1 à 3)
+        - @keyframes animation_card 
+--------------------------------------------
+    NB: Animation hover check présent sur la page-restauration/menu__card/ ::hover + bo
+*/
+
+//------------------------------------------ANIMATION HEART HOVER
+
 .fa-heart
 {
     z-index: 1;
     text-align: center; 
            
-
-    position: relative;//position pour absolute de fa-heart::after
+    position: relative; //position pour absolute de fa-heart::after
     color: black;
     transform: scale(1);
+    font-weight: 100;
         &:hover
         {
             cursor: pointer;
                 
                 &::after//fait apparaitre le fond red
                 {
+                    transition: opacity 0.5s ease-in;
                     opacity: 1; 
-                    transform: scale(1.03);
+                    // transform: scale(1.01);
                     
                 }
+
                 &::before//fait disparaitre le coeur noir
                 {
                     opacity: 0;
-                    transition: opacity 250ms ease-in; 
-                    
+                    transition: opacity 250ms ease-in;                     
                 }
         }
 
@@ -35,17 +63,15 @@
             opacity: 0;
             transition: opacity 250ms ease-in;
             transform : scale(0.96);
-            //--------------------------------------------------------------------------------
-            //permet le changement de couleur, mais je ne comprends pas totalement pourquoi...
-            // background: linear-gradient(12deg,$secondary 0%,$primary 100%);
+            //---------------------------------------------------------------
             background: linear-gradient(0deg,$secondary 25%,$primary 100%);
             background-clip: border-box;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            //---------------------------------------------------------------------------------
+            //---------------------------------------------------------------
         }
 }
-
+//-----------------------------------------------------------------------------BOX-CARD
 .box-card
 {
     transition: transform 250ms ease-in-out;
@@ -53,7 +79,271 @@
     z-index: 0;
         &:hover
         {
-            transform: scale(1.03);
+            box-shadow: 1px 3px 15px gray;            
+        }
+}
+//---------------------------------------------------------------------------- INDEX ANIMATION
+// Applique l'animation de transition du bloc index
+.index-hidden
+{
+    z-index: 0;
+    -webkit-animation: anim-index 2.7s forwards;
+    -o-animation:  anim-index 2.7s forwards;
+    animation: anim-index 2.7s forwards;
+}
+
+//-------------------------------------------------------ANIMATION SPIN LOADING ET TRANSITION
+.animation__loader
+{
+    z-index: 999999;
+    background: $graylite;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0; 
+    
+    // adaptabilité animation multi navigateur (pour les plus anciens)----------------------------
+    -webkit-animation: animation_load 3s;
+    -o-animation: animation_load 3s;
+    animation: animation_load 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+    &--spinner
+    {
+        //création du spinner position du spinner
+        position: absolute;
+        // top: 0; left: 0; right: 0; bottom: 0;
+        margin: auto 0;
+       
+
+        top: 35%;
+        left: 45%;
+        // transform: translateX(-50%);
+        
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, transparent, transparent 40%, $primary);    
+
+        /* / ! \ Deux arguments permettent de laisser le loading continuer tandis
+                 qu'il arrête l'animation avec le premier argument / ! \ */
+        -webkit-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+        -o-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+        animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite; 
+
+    }
+
+    &--spinner::before
+        {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            background: rgb(231, 230, 255);
+            border-radius: 50%;
+            z-index: 1000;
             
         }
+
+        &--spinner::after
+        {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: linear-gradient(45deg, transparent, transparent 40%, $primary);    
+            border-radius: 50%;
+            z-index: 1000;
+            z-index: 1;
+            filter: blur(10px);
+                        
+        }
+
+
+        .spin-2
+        {
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            // transform: translateX(-50%);
+            
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, transparent 40%, $primary);    
+   
+            -webkit-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+            -o-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+            animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+        }
+
+        .spin-3
+        {
+            position: absolute;
+            top: 55%;
+            left: 45%;
+            // transform: translateX(-50%);
+            
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, transparent 40%, $primary);    
+   
+            -webkit-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+            -o-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+            animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+
+        }
+}
+
+//------------------------------------------------------------------Animation loader spinner *3 - TRANSITION
+@keyframes spin-loading
+{
+    0%
+    {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+    
+    100%
+    {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+
+    }
+}
+//------------------------------------------------------------------Animation page pre_load - TRANSITION
+//-----------------------------Fait transiter la page pré-chargement
+@keyframes animation_load
+{
+    0%
+    {
+        // visibility: visible;
+        opacity: 1;
+        transform: translateY(0%);        
+    }
+
+    70%
+    {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100%
+    {
+        // visibility: hidden;
+        opacity: 0;
+        transform: translateX(200%);
+        
+    }
+}
+
+
+
+//-----------------------------Fait transiter le bloc Index
+@keyframes anim-index 
+{
+    0%
+    {
+        transform: translateX(-100%);
+        opacity: 0;
+        
+    }   
+
+    90%
+    {
+        transform: translateX(-100%);
+        opacity: 0;
+        
+    }
+
+    100% 
+    {
+        opacity: 1;
+        transform: translateX(0%);
+        transition: transform ease-in-out;
+        
+    } 
+}
+
+// ------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// -------------------------------------------------------ANIMATION DE CHECK VALIDATION
+@keyframes rotation-check
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+
+// -------------------------------------------------------ANIMATION CHARGEMENT PAGE RESTAURANT MENU
+// -------------------------------------- Animation des blocs entrée / plat / dessert
+.entree
+{
+    animation-name: animation_card;
+    animation-duration: 0.5s;
+}
+
+.plat
+{
+    animation-name: animation_card;
+    animation-duration: 1s;
+}
+
+.dessert
+{
+    animation-name: animation_card;
+    animation-duration: 1.5s;
+}
+
+// -------------------------------------- Reprend aniamtion base et impose un délai entre les block anim--1 à 3
+.menu__card
+{ 
+
+    &.anim--1
+    {
+        animation-name: animation_card;
+        animation-duration: 0.3s;
+    }
+
+    &.anim--2
+    {
+        animation-name: animation_card;
+        animation-duration: 0.6s;
+    }
+
+    &.anim--3
+    {
+        animation-name: animation_card;
+        animation-duration: 1s;
+    }
+}
+
+// -------------------------------------- Aniamtion base
+@keyframes animation_card 
+{
+    from 
+    {
+        // scale:(0);
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to 
+    {
+        // scale:(1);
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

@@ -1,3 +1,13 @@
+
+/*Glossaire
+
+    - footer
+        > __title
+        > __text
+    - fas (icone)
+    - a (couloeur text)
+*/
+
 /*-------------------------------------------------------------------footer */
 footer 
 {
@@ -5,22 +15,29 @@ footer
     display:  flex;
     flex-direction: column;
     width: 100%;
-    
+    height: auto;
+    position: relative;
+    padding-top: 15px;
+
+    // ----------------------------------------------------------------__title
     .footer__title
     {
-        margin: 25px 0 15px 20px;
+        
+        margin: 20px 0 0 20px;
         font-family: 'Shrikhand', cursive;
         color: white;
-
+        
         font-size: clamp(19px, 5vw, 30px);
         
-        @media (min-width: 768px) {
+        @media (min-width: 621px) 
+        {
             display: flex;
             justify-content: center;
         }
         
     }
     
+     // ----------------------------------------------------------------__text
     .footer__text 
     {
         
@@ -31,7 +48,7 @@ footer
         flex-direction: column;
         line-height: 25px;
         
-         @media (min-width: 768px) 
+         @media (min-width: 621px) 
          {
             display: flex;        
             flex-direction: column; 
