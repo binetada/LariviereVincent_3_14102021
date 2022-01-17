@@ -17,7 +17,7 @@ footer
         
         font-size: clamp(19px, 5vw, 30px);
         
-        @media (min-width: 768px) 
+        @media (min-width: 621px) 
         {
             display: flex;
             justify-content: center;
@@ -35,7 +35,7 @@ footer
         flex-direction: column;
         line-height: 25px;
         
-         @media (min-width: 768px) 
+         @media (min-width: 621px) 
          {
             display: flex;        
             flex-direction: column; 

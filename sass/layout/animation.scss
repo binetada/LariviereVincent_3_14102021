@@ -20,8 +20,7 @@
                 &::before//fait disparaitre le coeur noir
                 {
                     opacity: 0;
-                    transition: opacity 250ms ease-in; 
-                    
+                    transition: opacity 250ms ease-in;                     
                 }
         }
 
@@ -50,11 +49,12 @@
     transition: transform 250ms ease-in-out;
     transform: scale(1);
     z-index: 0;
-        &:active
+        &:hover
         {
-            transform: scale(1.03);            
+            box-shadow: 1px 3px 8px gray;            
         }
 }
+
 
 //----------------------------Animation page pre_load - TRANSITION
 //----------------------------Fait transiter la page pré-chargement
@@ -63,44 +63,50 @@
     0%
     {
         // visibility: visible;
-        opacity: 100;
-        transform: translateY(0%);
+        opacity: 1;
+        transform: translateY(0%);        
     }
 
     70%
     {
-        opacity: 100;
+        opacity: 1;
         transform: translateY(0%);
     }
 
     100%
     {
         // visibility: hidden;
-        // opacity: 0;
-        transform: translateY(-100%);
+        opacity: 0;
+        transform: translateX(200%);
         
     }
 }
+
+
 
 // Fait transiter le bloc Index
 @keyframes anim-index 
 {
     0%
     {
-        transform: translateY(10%);
-        // opacity: 0;
-        visibility: hidden;
+        transform: translateX(-100%);
+        opacity: 0;
+        
     }   
 
     90%
     {
-        transform: translateY(10%);
-        // opacity: 0;
+        transform: translateX(-100%);
+        opacity: 0;
+        
     }
 
     100% 
     {
-        transform: translateY(0);
+        opacity: 1;
+        transform: translateX(0%);
+        transition: transform ease-in-out;
+        
     } 
 }
 
@@ -118,13 +124,14 @@
 .animation__loader
 {
     z-index: 999999;
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 10%, rgba(86,109,220,1) 54%, rgba(255,121,218,1) 100%);
-    height: 100%;
+    background: $graylite;
+    // background: radial-gradient(circle, rgba(2,0,36,1) 10%, rgba(86,109,220,1) 54%, rgba(255,121,218,1) 100%);
+    height: auto;
     width: 100%;
-    position: absolute;
-    top: 0; right: 0;left: 0; bottom: 0;
-    overflow: hidden;
+    position: fixed;
+    // background-repeat: repeat-y;
+    top: 0; left: 0; right: 0; bottom: 0; 
+    // overflow: hidden;
     
     // adaptabilité animation multi navigateur (pour les plus anciens)----------------------------
     -webkit-animation: animation_load 3s;
@@ -133,47 +140,41 @@
     animation-fill-mode: forwards;
     opacity: 0;
 
-    // &--block-title
-    // {
-    //     font-size: clamp(20px, 5vw, 200px);
-    //     text-align: center;
-    //     position: relative;
-    //     top: 30%;
-
-    // }
-
+    
     &--spinner
     {
-        //création du spinner
-        //position du spinner
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        margin: auto;
+        //création du spinner position du spinner
+        position: absolute;
+        // top: 0; left: 0; right: 0; bottom: 0;
+        margin: auto 0;
+       
+
+        top: 35%;
+        left: 45%;
+        // transform: translateX(-50%);
         
-        width: 100px;
-        height: 100px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
         background: linear-gradient(45deg, transparent, transparent 40%, $primary);    
 
         /* / ! \ Deux arguments permettent de laisser le loading continuer tandis
                  qu'il arrête l'animation avec le premier argument / ! \ */
-        // -webkit-animation: spin-loading 0.5s linear forwards, spin-loading 0.5s linear infinite;
-        // -o-animation: spin-loading 0.5s linear forwards, spin-loading 0.5s linear infinite;
+        -webkit-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+        -o-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
         animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
-        // animation-play-state: ;
-
-        
+       
     }
 
     &--spinner::before
         {
             content: '';
             position: absolute;
-            top: 6px;
-            left: 6px;
-            right: 6px;
-            bottom: 6px;
-            background: #000;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            background: rgb(5, 4, 70);
             border-radius: 50%;
             z-index: 1000;
             
@@ -194,7 +195,43 @@
             filter: blur(30px);
                         
         }
+
+
+        .spin-2
+        {
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            // transform: translateX(-50%);
+            
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, transparent 40%, $primary);    
+   
+            -webkit-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+            -o-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+            animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+        }
+
+        .spin-3
+        {
+            position: absolute;
+            top: 55%;
+            left: 45%;
+            // transform: translateX(-50%);
+            
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, transparent 40%, $primary);    
+   
+            -webkit-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+            -o-animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+            animation: spin-loading 0.5s linear paused, spin-loading 0.5s linear infinite;
+        }
 }
+
 
 @keyframes spin-loading
 {
@@ -208,9 +245,24 @@
     {
         transform: rotate(360deg);
         filter: hue-rotate(360deg);
-        
-       
+
     }
 }
 
 //--------------------------------------------------------------------------------------------
+
+
+
+
+
+// .animation__loader
+// {
+//     background-color: red;
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//     -webkit-animation: animation_load 3s;
+//     -o-animation: animation_load 3s;
+//     animation: animation_load 3s;
+    
+// }

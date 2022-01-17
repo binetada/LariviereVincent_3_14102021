@@ -87,11 +87,11 @@ button
 
         &:hover 
         {
-            cursor: none; 
+            // cursor: none; 
             box-shadow: 1px 3px 12px rgb(177, 174, 174);
-            background: #fcf1ff;
+            background: #f7e1fd;
             // transform: scale(1.01);      
-            /*transition: all 1s ease-out;*/
+            transition: all 0.5s ease-out;
 
             .fas
             {

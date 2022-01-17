@@ -2,6 +2,8 @@
 par exemple la police de caractères et les normes que vous voulez appliquer sur tout votre site,
  telles que le box-sizing ; */
 
+
+
 /*--------------------------------------body-------------------------------*/
 body
 {
@@ -11,6 +13,7 @@ body
     z-index: 0;
     width: 100%;
     max-width: 1500px;
+    // height: 100vh;
    
     margin: 0 auto;
     
