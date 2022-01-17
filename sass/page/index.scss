@@ -1,6 +1,48 @@
-/* pages/ contient les blocs de code qui ne s’appliquent qu’à une seule page. Vous utilisez des boutons dans tout votre site,
- en revanche votre page d’accueil comporte une section Citation et une grille de projets qui ne sont employés nulle part ailleurs. 
- En d’autres termes, pages/ contient des règles spécifiques à une seule page qui ne seront pas réutilisées ailleurs ;*/
+
+/*Glossaire
+--------------------------------------------
+    localisation
+    - box (barre grise localisation)
+        > __geo-localisation
+            > --bold
+            > fa map marker (positionnement)
+    @mediaQ MinW 768px
+--------------------------------------------
+    Nav
+    - Explore
+        > h2
+        > p
+        > @mediaQ MinW 768px
+--------------------------------------------
+    Fonctionnement
+    - box-fonction 
+        > h3
+        > __choice
+        > __chiffre
+        > fas (icone)
+--------------------------------------------
+    restaurant
+    - container-restaurant
+        > heading-titre
+    - container__choice-restaurant
+    - box-card 
+        > @mediaQ MinW 1000px
+    - box__card--header img
+        > @mediaQ MinW 1000px
+    - text-card-title
+        > fa-heart
+            > @mediaQ MinW 1500px
+            > @mediaQ MinW 768px
+    - box__card--footer
+    - tag-new 
+        > @mediaQ MinW 992px
+--------------------------------------------
+    @mediaQ MinW 620px
+        > container-restaurant 
+        > box__card 
+        > box__card--footer
+
+*/
 
 .box
 {    
@@ -9,7 +51,8 @@
     background-color: $graylite;
    
     
-    &__geo-localisation {
+    &__geo-localisation 
+    {
         
         height: 40px;
         background-color: $graydark;
@@ -19,29 +62,31 @@
         align-items: center;
         justify-content: center;
         
-            &--bold {
+            &--bold 
+            {
                 font-weight: bolder;
                 font-size: 0.8em;
             }
         
-        
-        
-    .fa-map-marker-alt {
-        
-        margin-right: 15px;
-        margin-left: -50px;
+            .fa-map-marker-alt 
+            {
+                
+                margin-right: 15px;
+                margin-left: -50px;
+                
+            }
         
     }
-        
-    }
+
     //media magique pour le responsive grossissement 
     @media (min-width:768px) 
-        { 
-            height: auto;
-            font-size: 20px;
-            padding-bottom: 0.5%;
-        }
+    { 
+        height: auto;
+        font-size: 20px;
+        padding-bottom: 0.5%;
+    }
 }
+
 /*-----------------------------------------------NAV--------------------*/
 
 .explore
@@ -69,8 +114,7 @@
         font-weight: 100;
         margin: 20px 0; 
     }
-    
-    
+        
 }
 
 
@@ -105,22 +149,24 @@
         }   
     }
     
-    
-    &__choice {
+    &__choice 
+    {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         width: 100%;
         
-        @media (min-width: 1100px) {
+        @media (min-width: 1100px) 
+        {
             margin:auto;
             width: 60%;
             display: flex;
             flex-direction: row;
             justify-content: center;
             
-             @media (min-width: 1300px) {
+             @media (min-width: 1300px) 
+             {
                 margin:auto;
                 width: 1000px;
                 display: flex;
@@ -129,6 +175,28 @@
             }
         }
         
+    }
+
+    &__chiffre
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0;
+
+        z-index: 2;
+        background-color: $primary;
+        width: 20px;
+        height: 20px;
+        color: white;
+        border-radius: 50%;
+        font-size: 0.9em;  
+
+        margin: 0;
+        position: absolute;
+        left: 0;
+        transform: translateX(-50%);
+
     }
     
     .fas //espace à gauche pour les icones de fonctionnement
@@ -139,56 +207,31 @@
     
 }
 
-.box-fonction__chiffre
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 0;
-
-    z-index: 2;
-    background-color: $primary;
-    width: 20px;
-    height: 20px;
-    color: white;
-    border-radius: 50%;
-    font-size: 0.9em;  
-    
-    margin: 0;
-    position: absolute;
-    left: 0;
-    transform: translateX(-50%);
-      
-}
-
-
 /*---------------------------------------------restaurant--------------------------------------*/
-
 
 .container-restaurant
 {
     width: 100%;
-    margin:  0 auto;//---------------------------------------------a redéfinir à 0 pour l'espace entre le main et..
+    margin:  0 auto;
     background-color: $graylite;
-}
 
-.heading-titre
-{
-    margin-left: 20px;
-    font-size: clamp(16px, 4vw, 30px);
-    margin-bottom: 30px;
-    padding-top: 40px;
-
-    @media(min-width: 768px)
+    .heading-titre
     {
-        text-align: center;
-        padding-bottom: 20px;
+        margin-left: 20px;
+        font-size: clamp(16px, 4vw, 30px);
+        margin-bottom: 30px;
+        padding-top: 40px;
+
+        @media(min-width: 768px)
+        {
+            text-align: center;
+            padding-bottom: 20px;
+        }
     }
 }
 
 .container__choice-restaurant //row
 {
-    
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -216,7 +259,7 @@
     }
 }
 
-.box__card--header img // rien ne se passe si je n'interviens pas sur l'image /!\ pas de cover possible sur un div !
+.box__card--header img 
 {
     width: 100%;
     object-fit: cover;
@@ -264,7 +307,6 @@
     margin: 10px 0 0px 15px;
     line-height: 15px;
     font-size: clamp(15px, 1.8vw, 26px);//20px;
-    
     height:47px;
 }
 
@@ -296,17 +338,16 @@
 // ---------------------------------
 @media screen and (max-width: 620px) // en-dessous de 620px
 {
-    .container-restaurant
+    .container-restaurant 
     {
         width: 100%;
     }    
    
-    .box-card
+    .box-card 
     {
         width: 90%;
         
     }  
-    //------------------------------------------------------------------sp
 
     .box__card--footer
     {
